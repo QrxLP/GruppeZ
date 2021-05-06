@@ -27,7 +27,7 @@ public class GUI extends JFrame {
 
 
     }
-
+    //test für flo
     public GUI()
     {
 
