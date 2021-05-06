@@ -59,12 +59,12 @@ public class Logic {
      */
     public double[] add(double[] input)
     {
-        System.out.println(input[0]);
-        System.out.println( input[1]);
+        //System.out.println(input[0]);
+        //System.out.println( input[1]);
 
         double[] res=new double[1];
         res[0]=input[0]+input[1];
-        System.out.println(res[0]);
+        //System.out.println(res[0]);
         return res;
     }
 
