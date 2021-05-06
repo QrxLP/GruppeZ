@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="calculator.GUI">
+  <grid id="27dc6" binding="rootPanel" layout-manager="GridLayoutManager" row-count="4" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="25" y="20" width="499" height="394"/>
+    </constraints>
+    <properties>
+      <background color="-16050903"/>
+      <foreground color="-16050903"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="46434" class="javax.swing.JButton" binding="button1" default-binding="true">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Button"/>
+        </properties>
+      </component>
+      <grid id="626d" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-16050903"/>
+          <foreground color="-16050903"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="5ad6a" class="javax.swing.JTextField" binding="input1">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="150"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-16777216"/>
+              <font name="Consolas" size="26" style="1"/>
+              <foreground color="-1"/>
+            </properties>
+            <clientProperties>
+              <html.disable class="java.lang.Boolean" value="false"/>
+            </clientProperties>
+          </component>
+        </children>
+      </grid>
+      <grid id="7dbeb" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-16050903"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="bc883" class="javax.swing.JTextField" binding="input2">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="150"/>
+              </grid>
+            </constraints>
+            <properties>
+              <autoscrolls value="true"/>
+              <background color="-16777216"/>
+              <caretColor color="-16777216"/>
+              <font name="Consolas" size="26" style="1"/>
+              <foreground color="-1"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="2578" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-16050903"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="5ad50" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16050903"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="cc1f7" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Consolas" size="36" style="1"/>
+                  <foreground color="-1"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="0"/>
+                  <text value="="/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <grid id="fdec4" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-16050903"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="714ed" class="javax.swing.JButton" binding="button2" default-binding="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Button"/>
+            </properties>
+          </component>
+          <component id="5b5c5" class="javax.swing.JButton" binding="button3" default-binding="true">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Button"/>
+            </properties>
+          </component>
+          <component id="509a9" class="javax.swing.JButton" binding="button4" default-binding="true">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Button"/>
+            </properties>
+          </component>
+          <component id="a0104" class="javax.swing.JButton" binding="button5" default-binding="true">
+            <constraints>
+              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Button"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="63fa5" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-16050903"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="2a18a" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Consolas" size="36" style="1"/>
+              <foreground color="-1"/>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="0"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+  <inspectionSuppressions>
+    <suppress inspection="NoLabelFor" id="d8e35"/>
+  </inspectionSuppressions>
+</form>
