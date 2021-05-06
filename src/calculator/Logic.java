@@ -4,14 +4,10 @@ import javax.swing.*;
 
 public class Logic {
 
-
     Logic()
     {
 
     }
-
-
-
 
     /**
      * Decides which mathematical operation is supposed to be used by the first value in the input array
@@ -19,6 +15,10 @@ public class Logic {
      * 1 for Subtraction
      * 2 for Multiplication
      * 3 for Division
+     * 4 for Midnight_formula
+     * 5 for scalar_product
+     * 6 for vector_product
+     * 7 for Phytagoras_theorem
      *
      * @param input Array of numbers to be calculated
      * @return Result of the calculation
@@ -32,7 +32,6 @@ public class Logic {
         double[] temp = new double [tempLength];
         for(int i=0;i<temp.length;i++)
         {
-            //changed temp to input-> test if working
             temp[i]=input[i+1];
         }
         double[] res =new double[10];
@@ -47,6 +46,14 @@ public class Logic {
                 break;
             case 3: res=divide(temp);
                 break;
+            case 4: res=midnight_formula(temp);
+                break;
+            case 5: res=scalar_product(temp);
+                break;
+            case 6: res=vector_product(temp);
+                break;
+            case 7: res=Phytagoras_theorem(temp);
+                break;
         }
         return res;
 
@@ -59,12 +66,8 @@ public class Logic {
      */
     public double[] add(double[] input)
     {
-        //System.out.println(input[0]);
-        //System.out.println( input[1]);
-
         double[] res=new double[1];
         res[0]=input[0]+input[1];
-        //System.out.println(res[0]);
         return res;
     }
 
@@ -104,8 +107,6 @@ public class Logic {
         return res;
     }
 
-
-
     /*
      * Methode für die Mitternachtsformel.
      */
@@ -141,7 +142,6 @@ public class Logic {
         return result;
 
     }
-
 
     /*
      * Methode für das Skalarprodukt.
@@ -273,6 +273,5 @@ public class Logic {
         return result;
 
     }
-
 
 }
