@@ -16,6 +16,7 @@ public class logic {
         gui = new GUI();
         gui.setVisible(true);
         gui.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        gui.setLocationRelativeTo(null);
 
     }
 
