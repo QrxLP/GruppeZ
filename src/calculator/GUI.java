@@ -7,6 +7,8 @@ import java.awt.event.KeyEvent;
 public class GUI extends JFrame {
 
 
+
+    private Logic logic;
     private JPanel rootPanel;
     private JButton enter;
     private JTextField input1;
@@ -16,10 +18,23 @@ public class GUI extends JFrame {
     private JButton mult;
     private JButton diff;
     private JLabel operator;
+    private JLabel output;
     private int operatorNr;
+
+    public static void main (String args[]){
+
+        new GUI();
+
+
+    }
 
     public GUI()
     {
+
+        logic = new Logic();
+        setVisible(true);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
 
         add(rootPanel);
         setSize(400, 400);
@@ -65,6 +80,21 @@ public class GUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 operatorNr = 3;
                 operator.setText("/");
+            }
+        });
+        enter.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                double[] param = new double[3];
+                double[] out = new double[3];
+                param[0] = operatorNr;
+
+                param[1] = Double.parseDouble(input1.getText());
+                param[2] = Double.parseDouble(input2.getText());
+
+                out = logic.calc(param);
+
+                output.setText(String.valueOf(out[0]));
             }
         });
     }
