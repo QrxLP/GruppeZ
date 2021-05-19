@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
-public class GUI extends JFrame {
+public class GUIelementar extends JFrame {
 
 
 
@@ -21,14 +21,11 @@ public class GUI extends JFrame {
     private JLabel output;
     private int operatorNr;
 
-    public static void main (String args[]){
-
-        new GUI();
-
+    public static void main (String[] args){
 
     }
-    //test für flo
-    public GUI()
+
+    public GUIelementar()
     {
 
         logic = new Logic();
