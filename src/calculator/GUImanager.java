@@ -8,6 +8,8 @@ import java.awt.event.ActionListener;
 public class GUImanager extends JFrame {
 
     GUIelementar  guiElementar;
+    GUIpythagoras guiPythagoras;
+    GUIscalar  guiScalar;
     private JPanel rootPanel;
     private JButton buttonElementar;
     private JButton buttonPythagoras;
