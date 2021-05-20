@@ -23,7 +23,8 @@ public class GUImanager extends JFrame {
 
     GUImanager(){
         guiElementar = new GUIelementar();
-        setVisible(true);
+        guiPythagoras = new GUIpythagoras();
+        guiScalar = new GUIscalar();
         setVisible(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
