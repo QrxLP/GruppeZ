@@ -8,10 +8,13 @@ import java.awt.event.ActionListener;
 public class GUImanager extends JFrame {
 
     GUIelementar  guiElementar;
+    GUIpythagoras guiPythagoras;
+    GUIscalar  guiScalar;
     private JPanel rootPanel;
     private JButton buttonElementar;
     private JButton buttonPythagoras;
-    private JButton buttonVector;
+    private JButton buttonVektorPr;
+    private JButton buttonScalarPr;
 
     public  static void main (String[] args){
 
@@ -21,7 +24,8 @@ public class GUImanager extends JFrame {
 
     GUImanager(){
         guiElementar = new GUIelementar();
-        setVisible(true);
+        guiPythagoras = new GUIpythagoras();
+        guiScalar = new GUIscalar();
         setVisible(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -33,6 +37,8 @@ public class GUImanager extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 guiElementar.setVisible(true);
+                guiPythagoras.setVisible(false);
+                guiScalar.setVisible(false);
             }
         });
 
@@ -40,13 +46,17 @@ public class GUImanager extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 guiElementar.setVisible(false);
+                guiPythagoras.setVisible(true);
+                guiScalar.setVisible(false);
             }
         });
 
-        buttonVector.addActionListener(new ActionListener() {
+        buttonVektorPr.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 guiElementar.setVisible(false);
+                guiPythagoras.setVisible(false);
+                guiScalar.setVisible(true);
             }
         });
     }
