@@ -1,6 +1,9 @@
 package calculator;
 
-public class GUImanager {
+import javax.swing.*;
+
+
+public class GUImanager extends JFrame {
 
     GUIelementar  guiElementar;
 
@@ -12,6 +15,7 @@ public class GUImanager {
 
     GUImanager(){
         guiElementar = new GUIelementar();
+        setVisible(true);
 
     }
 }
