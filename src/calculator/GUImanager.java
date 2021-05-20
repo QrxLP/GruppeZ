@@ -10,6 +10,7 @@ public class GUImanager extends JFrame {
     GUIelementar  guiElementar;
     GUIpythagoras guiPythagoras;
     GUIscalar  guiScalar;
+    GUIvector guiVector;
     private JPanel rootPanel;
     private JButton buttonElementar;
     private JButton buttonPythagoras;
@@ -26,6 +27,7 @@ public class GUImanager extends JFrame {
         guiElementar = new GUIelementar();
         guiPythagoras = new GUIpythagoras();
         guiScalar = new GUIscalar();
+        guiVector = new GUIvector();
         setVisible(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
