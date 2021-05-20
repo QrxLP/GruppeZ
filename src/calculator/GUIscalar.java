@@ -5,12 +5,12 @@ import javax.swing.*;
 public class GUIscalar extends JFrame {
 
     private JPanel rootPanel;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
-    private JTextField textField5;
-    private JTextField textField6;
+    private JTextField a1TextField;
+    private JTextField a2TextField;
+    private JTextField a3TextField;
+    private JTextField b1TextField;
+    private JTextField b2TextField;
+    private JTextField b3TextField;
 
 
     GUIscalar(){
