@@ -58,7 +58,7 @@ public class GUImanager extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 guiElementar.setVisible(false);
                 guiPythagoras.setVisible(false);
-                guiScalar.setVisible(true);
+                guiScalar.setVisible(false);
             }
         });
     }
