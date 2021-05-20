@@ -29,8 +29,8 @@ public class GUIelementar extends JFrame {
     {
 
         logic = new Logic();
-        setVisible(true);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        //setVisible(true);
+
         setLocationRelativeTo(null);
 
         add(rootPanel);
