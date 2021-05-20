@@ -107,7 +107,7 @@ public class Logic {
         return res;
     }
 
-    /*
+    /**
      * Methode für die Mitternachtsformel.
      */
     public static double [] midnight_formula(double [] input) {
@@ -143,7 +143,7 @@ public class Logic {
 
     }
 
-    /*
+    /**
      * Methode für das Skalarprodukt.
      *
      * Reihenfolge im input array: a1, a2, a3, b1, b2, b3.
@@ -223,7 +223,7 @@ public class Logic {
 
     }
 
-    /*
+    /**
      * Methode für berechnen des SdP.
      * input [0] = Hypothenuse
      * input [1] = Kathete A
