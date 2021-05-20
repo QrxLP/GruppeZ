@@ -13,7 +13,8 @@ public class GUImanager extends JFrame {
     private JPanel rootPanel;
     private JButton buttonElementar;
     private JButton buttonPythagoras;
-    private JButton buttonVector;
+    private JButton buttonVektorPr;
+    private JButton buttonScalarPr;
 
     public  static void main (String[] args){
 
@@ -50,7 +51,7 @@ public class GUImanager extends JFrame {
             }
         });
 
-        buttonVector.addActionListener(new ActionListener() {
+        buttonVektorPr.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 guiElementar.setVisible(false);
