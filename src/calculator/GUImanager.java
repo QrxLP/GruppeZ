@@ -35,6 +35,20 @@ public class GUImanager extends JFrame {
                 guiElementar.setVisible(true);
             }
         });
+
+        buttonPythagoras.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                guiElementar.setVisible(false);
+            }
+        });
+
+        buttonVector.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                guiElementar.setVisible(false);
+            }
+        });
     }
 
 
