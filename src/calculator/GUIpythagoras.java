@@ -4,9 +4,9 @@ import javax.swing.*;
 
 public class GUIpythagoras extends JFrame {
     private JPanel rootPanel;
-    private JTextField katheteBTextField;
-    private JTextField hyphotenuseTextField;
-    private JFormattedTextField formattedTextField1;
+    private JTextField textField1;
+    private JTextField textField2;
+    private JTextField textField3;
 
     public static void main(String[] args) {
         new GUIpythagoras();
