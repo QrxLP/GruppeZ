@@ -23,6 +23,14 @@ public class GUIvector extends JFrame {
 
     public static void main(String [] args) {
 
+        new GUIvector();
+    }
+
+    GUIvector() {
+        setLocationRelativeTo(null);
+
+        add(rootPanel);
+        setSize(400, 400);
     }
 
 }
