@@ -36,6 +36,8 @@ public class GUImanager extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 guiElementar.setVisible(true);
+                guiPythagoras.setVisible(false);
+                guiScalar.setVisible(false);
             }
         });
 
@@ -43,6 +45,8 @@ public class GUImanager extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 guiElementar.setVisible(false);
+                guiPythagoras.setVisible(true);
+                guiScalar.setVisible(false);
             }
         });
 
@@ -50,6 +54,8 @@ public class GUImanager extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 guiElementar.setVisible(false);
+                guiPythagoras.setVisible(false);
+                guiScalar.setVisible(true);
             }
         });
     }
