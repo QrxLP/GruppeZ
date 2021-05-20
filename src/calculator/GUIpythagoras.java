@@ -4,9 +4,13 @@ import javax.swing.*;
 
 public class GUIpythagoras extends JFrame {
     private JPanel rootPanel;
+    private JTextField katheteATextField;
     private JTextField katheteBTextField;
-    private JTextField hyphotenuseTextField;
-    private JFormattedTextField formattedTextField1;
+    private JTextField hypothenuseTextField;
+    private JLabel katheteALabel;
+    private JLabel katheteBLabel;
+    private JLabel hypothenuseLabel;
+    private JButton button1;
 
     public static void main(String[] args) {
         new GUIpythagoras();
