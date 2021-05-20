@@ -96,4 +96,9 @@ public class GUIelementar extends JFrame {
         });
     }
 
+    public void mSetVisible()
+    {
+
+    }
+
 }
