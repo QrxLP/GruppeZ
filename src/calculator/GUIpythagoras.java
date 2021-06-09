@@ -33,24 +33,28 @@ public class GUIpythagoras extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 double[] param =new double[4];
                 param[0]=7;
-                if(katheteATextField.getText()==null)
+                System.out.println("Calc");
+                if(katheteATextField.getText().equals(""))
                 {
+                    System.out.println("A");
                     param[1]=0;
                     param[2]=Double.parseDouble(katheteBTextField.getText());
                     param[3]=Double.parseDouble(hypothenuseTextField.getText());
                     double[] out= logic.calc(param);
                     katheteATextField.setText(String.valueOf(out[0]));
                 }
-                else if(katheteBTextField.getText()==null)
+                else if(katheteBTextField.getText().equals(""))
                 {
+                    System.out.println("B");
                     param[1]=Double.parseDouble(katheteATextField.getText());
                     param[2]=0;
                     param[3]=Double.parseDouble(hypothenuseTextField.getText());
                     double[] out= logic.calc(param);
                     katheteBTextField.setText(String.valueOf(out[0]));
                 }
-                else if(hypothenuseTextField.getText()==null)
+                else if(hypothenuseTextField.equals(""))
                 {
+                    System.out.println("C");
                     param[1]=Double.parseDouble(katheteATextField.getText());
                     param[2]=Double.parseDouble(katheteBTextField.getText());
                     param[3]=0;
