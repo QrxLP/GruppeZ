@@ -177,8 +177,33 @@ public class Logic {
 
         //Filling result array and returning it.
         result [0] = scalar_product;
+
+
+        //winkel
+        double zähler;
+        double nenner;
+
+        zähler = result[0];
+        double [] a;
+        a = new double[]{input[0], input[1], input[3]};
+
+        double [] b;
+        b = new double[]{input[0], input[1], input[3]};
+        nenner = vector_lenght(a)[0] + vector_lenght(b)[0];
+
+
+        result[1] = Math.acos(zähler / nenner);
         return result;
 
+    }
+
+    public static double[] vector_lenght(double[] input){
+        double[] result;
+        result = new double[3];
+
+        result[0] = Math.sqrt(Math.pow(input[0],2) + Math.pow(input[1],2) + Math.pow(input[2],2));
+
+        return result;
     }
 
     /**
