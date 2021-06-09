@@ -45,7 +45,7 @@ public class GUIvector extends JFrame {
                 input[6] = Double.parseDouble(c2.getText());
 
                 double[] output = new double[3];
-                output = logic.vector_product(input);
+                output = logic.calc(output);
             }
             });
 
