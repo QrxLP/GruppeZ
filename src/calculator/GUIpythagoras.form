@@ -5,7 +5,9 @@
     <constraints>
       <xy x="22" y="20" width="474" height="374"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-14737634"/>
+    </properties>
     <border type="none"/>
     <children>
       <grid id="6946f" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -13,7 +15,9 @@
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="3534c" class="javax.swing.JLabel" binding="katheteALabel">
@@ -24,6 +28,8 @@
               </grid>
             </constraints>
             <properties>
+              <background color="-13487565"/>
+              <foreground color="-4671304"/>
               <horizontalTextPosition value="0"/>
               <text value="Kathete A"/>
             </properties>
@@ -35,14 +41,19 @@
                 <maximum-size width="100" height="50"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-13487565"/>
+              <foreground color="-4671304"/>
+            </properties>
           </component>
           <grid id="4c49e" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-14737634"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
@@ -53,7 +64,9 @@
         <constraints>
           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="135b7" class="javax.swing.JLabel" binding="katheteBLabel">
@@ -64,6 +77,8 @@
               </grid>
             </constraints>
             <properties>
+              <background color="-14343130"/>
+              <foreground color="-4671304"/>
               <text value="Kathete B"/>
             </properties>
           </component>
@@ -74,14 +89,19 @@
                 <maximum-size width="100" height="50"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-13487565"/>
+              <foreground color="-4671304"/>
+            </properties>
           </component>
           <grid id="82a88" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-14737634"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
@@ -92,7 +112,9 @@
         <constraints>
           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="bcb5b" class="javax.swing.JLabel" binding="hypothenuseLabel">
@@ -103,6 +125,8 @@
               </grid>
             </constraints>
             <properties>
+              <background color="-14343130"/>
+              <foreground color="-4671304"/>
               <text value="Hypothenuse"/>
             </properties>
           </component>
@@ -113,14 +137,19 @@
                 <maximum-size width="100" height="50"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-13487565"/>
+              <foreground color="-4671304"/>
+            </properties>
           </component>
           <grid id="df79c" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-14737634"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
@@ -131,7 +160,10 @@
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+          <foreground color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children/>
       </grid>
@@ -140,7 +172,9 @@
         <constraints>
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children/>
       </grid>
@@ -149,7 +183,9 @@
         <constraints>
           <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children/>
       </grid>
@@ -158,7 +194,9 @@
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children/>
       </grid>
@@ -167,7 +205,9 @@
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="7df18" class="javax.swing.JButton" binding="Calculate">
@@ -175,6 +215,8 @@
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-12763844"/>
+              <foreground color="-4671304"/>
               <text value="="/>
             </properties>
           </component>
@@ -190,7 +232,9 @@
         <constraints>
           <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children/>
       </grid>
