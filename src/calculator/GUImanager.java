@@ -32,10 +32,20 @@ public class GUImanager extends JFrame {
         guiScalar = new GUIscalar();
         guiVector = new GUIvector();
         guiMidnightFormular = new midnightFormula();
+
+
+
         setVisible(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setSize(400, 400);
+        ImageIcon img = new ImageIcon("icon.png");
+        setIconImage(img.getImage());
+
+
+
+
+
         buttonElementar.setFocusPainted(false);
         buttonElementar.setBorderPainted(false);
 
