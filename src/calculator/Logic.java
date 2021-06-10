@@ -54,6 +54,7 @@ public class Logic {
                 break;
             case 7: res=Phytagoras_theorem(temp);
                 break;
+            case 8: res=vector_lenght(temp);
         }
         return res;
 
@@ -168,7 +169,7 @@ public class Logic {
         b1 = input [3];
         b2 = input [4];
         b3 = input [5];
-        result = new double [1];
+        result = new double [2];
 
 
         //Logic
@@ -180,6 +181,7 @@ public class Logic {
 
 
         //winkel
+        // todo radiant umwandeln
         double zähler;
         double nenner;
 

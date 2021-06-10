@@ -15,16 +15,31 @@ public class GUIscalar extends JFrame {
     private JTextField b3TextField;
     private JButton enterButton;
     private JLabel outputLabel;
+    private Logic logic;
 
 
     GUIscalar(){
         add(rootPanel);
         setSize(400, 400 );
         setLocationRelativeTo(null);
+        logic = new Logic();
         enterButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                double[] temp;
+                temp = new double[7];
 
+                temp[0]=6;
+                temp[1] = Double.parseDouble(a1TextField.getText());
+                temp[2] = Double.parseDouble(a2TextField.getText());
+                temp[3] = Double.parseDouble(a3TextField.getText());
+                temp[4] = Double.parseDouble(b1TextField.getText());
+                temp[5] = Double.parseDouble(b2TextField.getText());
+                temp[6] = Double.parseDouble(b3TextField.getText());
+
+
+
+                outputLabel.setText("Winkel: " + String.valueOf(logic.calc(temp)[1]));
             }
         });
     }
