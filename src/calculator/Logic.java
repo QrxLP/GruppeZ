@@ -268,9 +268,9 @@ public class Logic {
 
 
         //Initializing the variables which save the values received from the input array.
-        cathete_a = input [1];
-        cathete_b = input [2];
-        hypothenuse_c = input [3];
+        cathete_a = input [0];
+        cathete_b = input [1];
+        hypothenuse_c = input [2];
 
 
         /*
