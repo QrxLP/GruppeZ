@@ -39,7 +39,7 @@ public class GUIscalar extends JFrame {
 
 
 
-                outputLabel.setText("Winkel: " + String.valueOf(logic.calc(temp)[1]));
+                outputLabel.setText("Winkel: " + String.valueOf(Math.toDegrees(logic.calc(temp)[1])));
             }
         });
     }
