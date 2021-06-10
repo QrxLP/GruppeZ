@@ -36,6 +36,21 @@ public class GUImanager extends JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setSize(400, 400);
+        buttonElementar.setFocusPainted(false);
+        buttonElementar.setBorderPainted(false);
+
+        buttonPythagoras.setFocusPainted(false);
+        buttonPythagoras.setBorderPainted(false);
+
+        buttonScalarPr.setFocusPainted(false);
+        buttonScalarPr.setBorderPainted(false);
+
+        buttonVektorPr.setFocusPainted(false);
+        buttonVektorPr.setBorderPainted(false);
+
+        buttonMidnight.setFocusPainted(false);
+        buttonMidnight.setBorderPainted(false);
+
 
         guiElementar.setVisible(false);
         guiPythagoras.setVisible(false);

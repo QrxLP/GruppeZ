@@ -13,7 +13,9 @@
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="7916c" class="javax.swing.JButton" binding="buttonElementar">
@@ -21,6 +23,8 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-12763844"/>
+              <foreground color="-4671304"/>
               <text value="Elementarrechnung"/>
             </properties>
           </component>
@@ -34,6 +38,8 @@
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-12763844"/>
+              <foreground color="-4671304"/>
               <text value="Pythagoras"/>
             </properties>
           </component>
@@ -42,6 +48,8 @@
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-12763844"/>
+              <foreground color="-4671304"/>
               <text value="Vektorprodukt"/>
             </properties>
           </component>
@@ -50,6 +58,8 @@
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-12763844"/>
+              <foreground color="-4671304"/>
               <text value="Scalarprodukt"/>
             </properties>
           </component>
@@ -58,6 +68,8 @@
               <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-12763844"/>
+              <foreground color="-4671304"/>
               <text value="Mitternachtsformel"/>
             </properties>
           </component>
