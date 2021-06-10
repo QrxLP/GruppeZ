@@ -32,6 +32,11 @@ public class GUImanager extends JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setSize(400, 400);
+        guiElementar.setVisible(false);
+        guiPythagoras.setVisible(false);
+        guiScalar.setVisible(false);
+        guiVector.setVisible(false);
+
 
         add(rootPanel);
 
