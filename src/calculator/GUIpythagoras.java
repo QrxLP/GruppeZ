@@ -41,25 +41,25 @@ public class GUIpythagoras extends JFrame {
                 if(katheteATextField.getText().equals("") && !katheteBTextField.getText().equals("") && !hypothenuseTextField.getText().equals(""))
 
                 {
-                    param[1]=0;
-                    param[2]=Double.parseDouble(katheteBTextField.getText());
-                    param[3]=Double.parseDouble(hypothenuseTextField.getText());
+                    param[1]=Double.parseDouble(hypothenuseTextField.getText());
+                    param[2]=0;
+                    param[3]=Double.parseDouble(katheteBTextField.getText());
                     double[] out= logic.calc(param);
                     katheteATextField.setText(String.valueOf(out[0]));
                 }
                 else if(katheteBTextField.getText().equals("") && !katheteATextField.getText().equals("") && !hypothenuseTextField.getText().equals(""))
                 {
-                    param[1]=Double.parseDouble(katheteATextField.getText());
-                    param[2]=0;
-                    param[3]=Double.parseDouble(hypothenuseTextField.getText());
+                    param[1]=Double.parseDouble(hypothenuseTextField.getText());
+                    param[2]=Double.parseDouble(katheteATextField.getText());
+                    param[3]=0;
                     double[] out= logic.calc(param);
                     katheteBTextField.setText(String.valueOf(out[0]));
                 }
                 else if(hypothenuseTextField.getText().equals("") && !katheteATextField.getText().equals("") && !katheteBTextField.getText().equals(""))
                 {
-                    param[1]=Double.parseDouble(katheteATextField.getText());
-                    param[2]=Double.parseDouble(katheteBTextField.getText());
-                    param[3]=0;
+                    param[1]=0;
+                    param[2]=Double.parseDouble(katheteATextField.getText());
+                    param[3]=Double.parseDouble(katheteBTextField.getText());
                     double[] out= logic.calc(param);
                     hypothenuseTextField.setText(String.valueOf(out[0]));
                 }
