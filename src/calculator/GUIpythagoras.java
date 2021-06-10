@@ -66,7 +66,7 @@ public class GUIpythagoras extends JFrame {
                 else
                 {
                     katheteATextField.setText("");
-                    katheteATextField.setText("");
+                    katheteBTextField.setText("");
                     hypothenuseTextField.setText("");
                 }
 
