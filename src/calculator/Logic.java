@@ -128,11 +128,14 @@ public class Logic {
         a = input[0];
         b = input [1];
         c = input [2];
-        result  = new double[2];
+        result  = new double[3];
 
 
         //Logic: Splits the process into 2 parts.
         value_under_sqrt = Math.pow(b, 2) - 4 * a * c;
+        if(value_under_sqrt <= 0) {
+            result[2] = 1;
+        }
         x1 = (-1 * b + Math.sqrt(value_under_sqrt)) / (2 * a);
         x2 = (-1 * b - Math.sqrt(value_under_sqrt)) / (2 * a);
 
