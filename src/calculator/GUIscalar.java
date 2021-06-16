@@ -23,6 +23,8 @@ public class GUIscalar extends JFrame {
         setSize(400, 400 );
         setLocationRelativeTo(null);
         logic = new Logic();
+        enterButton.setBorderPainted(false);
+
         enterButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
