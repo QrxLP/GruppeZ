@@ -11,11 +11,14 @@ public class GUImanager extends JFrame {
     GUIpythagoras guiPythagoras;
     GUIscalar  guiScalar;
     GUIvector guiVector;
+    midnightFormula guiMidnightFormular;
     private JPanel rootPanel;
     private JButton buttonElementar;
     private JButton buttonPythagoras;
     private JButton buttonVektorPr;
     private JButton buttonScalarPr;
+    private JButton buttonMidnight;
+
 
     public  static void main (String[] args){
 
@@ -28,10 +31,43 @@ public class GUImanager extends JFrame {
         guiPythagoras = new GUIpythagoras();
         guiScalar = new GUIscalar();
         guiVector = new GUIvector();
+        guiMidnightFormular = new midnightFormula();
+
+
+
         setVisible(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setSize(400, 400);
+        ImageIcon img = new ImageIcon("icon.png");
+        setIconImage(img.getImage());
+
+
+
+
+
+        buttonElementar.setFocusPainted(false);
+        buttonElementar.setBorderPainted(false);
+
+        buttonPythagoras.setFocusPainted(false);
+        buttonPythagoras.setBorderPainted(false);
+
+        buttonScalarPr.setFocusPainted(false);
+        buttonScalarPr.setBorderPainted(false);
+
+        buttonVektorPr.setFocusPainted(false);
+        buttonVektorPr.setBorderPainted(false);
+
+        buttonMidnight.setFocusPainted(false);
+        buttonMidnight.setBorderPainted(false);
+
+
+        guiElementar.setVisible(false);
+        guiPythagoras.setVisible(false);
+        guiScalar.setVisible(false);
+        guiVector.setVisible(false);
+        guiMidnightFormular.setVisible(false);
+
 
         add(rootPanel);
 
@@ -52,6 +88,7 @@ public class GUImanager extends JFrame {
                 guiPythagoras.setVisible(true);
                 guiScalar.setVisible(false);
                 guiVector.setVisible(false);
+                guiMidnightFormular.setVisible(false);
             }
         });
 
@@ -62,6 +99,7 @@ public class GUImanager extends JFrame {
                 guiPythagoras.setVisible(false);
                 guiScalar.setVisible(false);
                 guiVector.setVisible(true);
+                guiMidnightFormular.setVisible(false);
             }
         });
 
@@ -72,6 +110,17 @@ public class GUImanager extends JFrame {
                 guiPythagoras.setVisible(false);
                 guiScalar.setVisible(true);
                 guiVector.setVisible(false);
+                guiMidnightFormular.setVisible(false);
+            }
+        });
+        buttonMidnight.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                guiElementar.setVisible(false);
+                guiPythagoras.setVisible(false);
+                guiScalar.setVisible(false);
+                guiVector.setVisible(false);
+                guiMidnightFormular.setVisible(true);
             }
         });
     }
