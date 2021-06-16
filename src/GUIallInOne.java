@@ -12,7 +12,7 @@ public class GUIallInOne extends JFrame {
     private JButton twoButton;
     private JButton threeButton;
     private JButton zeroButton;
-
+    private JPanel root;
 
 
     public static void main (String[] args){
@@ -21,7 +21,10 @@ public class GUIallInOne extends JFrame {
     }
 
     GUIallInOne(){
-
+        add(root);
         setVisible(true);
+        setSize(500,400);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
     }
 }
