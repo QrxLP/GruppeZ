@@ -3,6 +3,7 @@ package calculator;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 
 public class midnightFormula extends JFrame{
 
@@ -23,6 +24,9 @@ public class midnightFormula extends JFrame{
         add(rootPanel);
         setSize(400,400);
         resultPossibleLabel.setVisible(false);
+
+        enter.setBorderPainted(false);
+        enter.setMnemonic(KeyEvent.VK_ENTER);
 
         enter.addActionListener(new ActionListener() {
             @Override
