@@ -34,7 +34,7 @@ public class Logic {
         {
             temp[i]=input[i+1];
         }
-        double[] res =new double[10];
+        double[] res;
         //Decision for operation ; add new operations when finished
         switch (op)
         {
@@ -55,6 +55,10 @@ public class Logic {
             case 7: res=Phytagoras_theorem(temp);
                 break;
             case 8: res=vector_lenght(temp);
+
+            default:
+                res = new double[10];
+                //Error!
         }
         return res;
 

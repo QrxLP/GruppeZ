@@ -15,11 +15,15 @@ public class GUIvector extends JFrame {
     private JTextField a2;
     private JTextField b2;
     private JTextField c2;
-    private JTextField textField7;
-    private JTextField textField8;
-    private JTextField textField9;
+    private JTextField C1;
+    private JTextField C2;
+    private JTextField C3;
     private JButton enter;
     Logic logic;
+
+    public static void main(String [] args) {
+        new GUIvector();
+    }
 
     GUIvector() {
         setTitle("Vektorprodukt");
@@ -27,7 +31,7 @@ public class GUIvector extends JFrame {
 
         add(rootPanel);
         setSize(400, 400);
-        setVisible(false);
+        setVisible(true);
 
         logic = new Logic();
 
@@ -46,7 +50,10 @@ public class GUIvector extends JFrame {
                 input[6] = Double.parseDouble(c2.getText());
 
                 double[] output = new double[3];
-                output = logic.calc(output);
+                output = logic.calc(input);
+                C1.setText(String.valueOf(output[0]));
+                C2.setText(String.valueOf(output[1]));
+                C3.setText(String.valueOf(output[2]));
             }
             });
 

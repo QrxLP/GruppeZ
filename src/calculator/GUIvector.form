@@ -223,7 +223,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="38d5b" class="javax.swing.JTextField" binding="textField8" default-binding="true">
+          <component id="38d5b" class="javax.swing.JTextField" binding="C2">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <minimum-size width="70" height="45"/>
@@ -245,7 +245,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="c16df" class="javax.swing.JTextField" binding="textField9" default-binding="true">
+          <component id="c16df" class="javax.swing.JTextField" binding="C3">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <minimum-size width="70" height="45"/>
@@ -267,7 +267,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="2ad3d" class="javax.swing.JTextField" binding="textField7" default-binding="true">
+          <component id="2ad3d" class="javax.swing.JTextField" binding="C1">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <minimum-size width="70" height="45"/>
