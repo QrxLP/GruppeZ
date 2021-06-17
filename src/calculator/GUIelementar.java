@@ -28,6 +28,7 @@ public class GUIelementar extends JFrame {
     public GUIelementar()
     {
 
+        setTitle("Elementarrechnung");
         logic = new Logic();
         //setVisible(true);
 
