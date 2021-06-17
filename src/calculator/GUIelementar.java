@@ -6,9 +6,7 @@ import java.awt.event.KeyEvent;
 
 public class GUIelementar extends JFrame {
 
-
-
-    private Logic logic;
+    //
     private JPanel rootPanel;
     private JButton enter;
     private JTextField input1;
@@ -20,6 +18,8 @@ public class GUIelementar extends JFrame {
     private JLabel operator;
     private JLabel output;
     private int operatorNr;
+
+    private Logic logic;
 
     public static void main (String[] args){
 
