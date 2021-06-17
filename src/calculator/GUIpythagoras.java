@@ -23,7 +23,7 @@ public class GUIpythagoras extends JFrame {
 
     public GUIpythagoras() {
 
-        setTitle("Sart des Pythagoras");
+        setTitle("Satz des Pythagoras");
         logic = new Logic();
         setLocationRelativeTo(null);
 
@@ -55,7 +55,8 @@ public class GUIpythagoras extends JFrame {
                     param[2]=0;
                     param[3]=Double.parseDouble(katheteBTextField.getText());
                     double[] out= logic.calc(param);
-                    katheteATextField.setText(String.valueOf(out[0]));
+                    double outNumber =(Math.round(out[0] * 100.0) / 100.0);
+                    katheteATextField.setText(String.valueOf(outNumber));
                     katheteATextField.setForeground(resultColor);
                 }
                 //second input jTextField is empty, the others not
@@ -65,7 +66,8 @@ public class GUIpythagoras extends JFrame {
                     param[2]=Double.parseDouble(katheteATextField.getText());
                     param[3]=0;
                     double[] out= logic.calc(param);
-                    katheteBTextField.setText(String.valueOf(out[0]));
+                    double outNumber =(Math.round(out[0] * 100.0) / 100.0);
+                    katheteBTextField.setText(String.valueOf(outNumber));
                     katheteBTextField.setForeground(resultColor);
                 }
                 //third input jTextField is empty, the others not
@@ -75,7 +77,8 @@ public class GUIpythagoras extends JFrame {
                     param[2]=Double.parseDouble(katheteATextField.getText());
                     param[3]=Double.parseDouble(katheteBTextField.getText());
                     double[] out= logic.calc(param);
-                    hypothenuseTextField.setText(String.valueOf(out[0]));
+                    double outNumber =(Math.round(out[0] * 100.0) / 100.0);
+                    hypothenuseTextField.setText(String.valueOf(outNumber));
                     hypothenuseTextField.setForeground(resultColor);
                 }
                 //multiple input jTextFields are empty or all are full
