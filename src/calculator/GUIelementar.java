@@ -45,6 +45,9 @@ public class GUIelementar extends JFrame {
         ACButton.setBorderPainted(false);
         ACButton.setMnemonic(KeyEvent.VK_ESCAPE);
 
+        //input1 = new JFormattedTextField()
+        //todo farmattet text field
+
         add.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
