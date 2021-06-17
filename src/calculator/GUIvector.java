@@ -19,6 +19,7 @@ public class GUIvector extends JFrame {
     private JTextField C2;
     private JTextField C3;
     private JButton enter;
+    private JLabel leftBracketLabel;
     Logic logic;
 
     public static void main(String [] args) {
@@ -61,6 +62,7 @@ public class GUIvector extends JFrame {
 
 
     }
+
 
 
 }

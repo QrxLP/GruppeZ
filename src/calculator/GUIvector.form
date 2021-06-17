@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="calculator.GUIvector">
-  <grid id="27dc6" binding="rootPanel" layout-manager="GridLayoutManager" row-count="7" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="rootPanel" layout-manager="GridLayoutManager" row-count="7" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
       <xy x="20" y="20" width="554" height="400"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-14737634"/>
+    </properties>
     <border type="none"/>
     <children>
       <grid id="f44f2" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="cc31f" class="javax.swing.JTextField" binding="c1">
@@ -25,6 +29,7 @@
               </grid>
             </constraints>
             <properties>
+              <background color="-13487565"/>
               <horizontalAlignment value="0"/>
             </properties>
           </component>
@@ -33,18 +38,22 @@
       <grid id="6c6ae" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children/>
       </grid>
       <grid id="e0280" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="10cf8" class="javax.swing.JButton" binding="enter">
@@ -52,6 +61,8 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-16480295"/>
+              <foreground color="-4671304"/>
               <text value="="/>
             </properties>
           </component>
@@ -60,9 +71,11 @@
       <grid id="4ae76" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children/>
       </grid>
@@ -71,16 +84,20 @@
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children/>
       </grid>
       <grid id="3ba3f" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="aa8a4" class="javax.swing.JTextField" binding="c2">
@@ -92,26 +109,20 @@
               </grid>
             </constraints>
             <properties>
+              <background color="-13487565"/>
               <horizontalAlignment value="0"/>
             </properties>
           </component>
         </children>
       </grid>
-      <grid id="3e1f0" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-        <margin top="0" left="0" bottom="0" right="0"/>
-        <constraints>
-          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties/>
-        <border type="none"/>
-        <children/>
-      </grid>
       <grid id="4ba96" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="5ba96" class="javax.swing.JTextField" binding="b2">
@@ -123,6 +134,7 @@
               </grid>
             </constraints>
             <properties>
+              <background color="-13487565"/>
               <horizontalAlignment value="0"/>
             </properties>
           </component>
@@ -131,9 +143,11 @@
       <grid id="c6729" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="95959" class="javax.swing.JTextField" binding="a2">
@@ -145,6 +159,7 @@
               </grid>
             </constraints>
             <properties>
+              <background color="-13487565"/>
               <horizontalAlignment value="0"/>
             </properties>
           </component>
@@ -153,27 +168,33 @@
       <grid id="4429f" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children/>
       </grid>
       <grid id="1a5ce" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children/>
       </grid>
       <grid id="f3811" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="f4953" class="javax.swing.JTextField" binding="b1">
@@ -185,6 +206,7 @@
               </grid>
             </constraints>
             <properties>
+              <background color="-13487565"/>
               <horizontalAlignment value="0"/>
             </properties>
           </component>
@@ -193,13 +215,15 @@
       <grid id="e21b2" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
             <minimum-size width="60" height="60"/>
             <preferred-size width="60" height="60"/>
             <maximum-size width="60" height="60"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="bde9f" class="javax.swing.JTextField" binding="a1">
@@ -210,7 +234,9 @@
               </grid>
             </constraints>
             <properties>
+              <background color="-13487565"/>
               <horizontalAlignment value="0"/>
+              <text value=""/>
             </properties>
           </component>
         </children>
@@ -218,9 +244,11 @@
       <grid id="d0a24" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="38d5b" class="javax.swing.JTextField" binding="C2">
@@ -232,6 +260,7 @@
               </grid>
             </constraints>
             <properties>
+              <background color="-13487565"/>
               <horizontalAlignment value="0"/>
             </properties>
           </component>
@@ -240,9 +269,11 @@
       <grid id="cf865" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="c16df" class="javax.swing.JTextField" binding="C3">
@@ -254,6 +285,7 @@
               </grid>
             </constraints>
             <properties>
+              <background color="-13487565"/>
               <horizontalAlignment value="0"/>
             </properties>
           </component>
@@ -262,9 +294,11 @@
       <grid id="93abd" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="2ad3d" class="javax.swing.JTextField" binding="C1">
@@ -276,6 +310,7 @@
               </grid>
             </constraints>
             <properties>
+              <background color="-13487565"/>
               <horizontalAlignment value="0"/>
             </properties>
           </component>
@@ -284,9 +319,11 @@
       <grid id="a3e0" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="98eb0" class="javax.swing.JLabel">
@@ -298,6 +335,7 @@
               </grid>
             </constraints>
             <properties>
+              <foreground color="-4671304"/>
               <horizontalAlignment value="0"/>
               <horizontalTextPosition value="0"/>
               <text value="X"/>
@@ -305,6 +343,37 @@
           </component>
         </children>
       </grid>
+      <component id="a6a78" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="5" row-span="3" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=")"/>
+        </properties>
+      </component>
+      <grid id="648f4" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-14737634"/>
+        </properties>
+        <border type="none"/>
+        <children/>
+      </grid>
+      <component id="80fe0" class="javax.swing.JLabel" binding="leftBracketLabel">
+        <constraints>
+          <grid row="0" column="1" row-span="3" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="100"/>
+            <preferred-size width="-1" height="100"/>
+            <maximum-size width="-1" height="100"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="("/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>

@@ -27,9 +27,16 @@ public class GUIpythagoras extends JFrame {
         logic = new Logic();
         setLocationRelativeTo(null);
 
+        Color resultColor= new Color(4,135,217);
+        Color textColor=new Color(184,184,184);
+
         katheteATextField.setText("");
         katheteATextField.setText("");
         hypothenuseTextField.setText("");
+        katheteATextField.setCaretColor(textColor);
+        katheteATextField.setCaretColor(textColor);
+        hypothenuseTextField.setCaretColor(textColor);
+
         add(rootPanel);
         setSize(400,400);
 
@@ -41,11 +48,9 @@ public class GUIpythagoras extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 double[] param =new double[4];
                 param[0]=7;
-                Color resultColor= new Color(4,135,217);
-                Color defaultColor=new Color(184,184,184);
-                katheteATextField.setForeground(defaultColor); //changes the color back to the default text color, important for consecutive calculations
-                katheteBTextField.setForeground(defaultColor);
-                hypothenuseTextField.setForeground(defaultColor);
+                katheteATextField.setForeground(textColor); //changes the color back to the default text color, important for consecutive calculations
+                katheteBTextField.setForeground(textColor);
+                hypothenuseTextField.setForeground(textColor);
 
                 //first input jTextField is empty, the others not
                 if(katheteATextField.getText().equals("") && !katheteBTextField.getText().equals("") && !hypothenuseTextField.getText().equals(""))
