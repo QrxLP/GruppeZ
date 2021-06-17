@@ -27,32 +27,20 @@ public class GUImanager extends JFrame {
     }
 
     GUImanager(){
-        //initialisieren der JFrames für die verschiedenen Berechnungen
+
+        setVisible(true);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setSize(400, 400);
+        ImageIcon img = new ImageIcon("icon.png");
+        setIconImage(img.getImage());
+
+
         guiElementar = new GUIelementar();
         guiPythagoras = new GUIpythagoras();
         guiScalar = new GUIscalar();
         guiVector = new GUIvector();
         guiMidnightFormular = new midnightFormula();
-
-
-        //diese GUI immer sichbar
-        setVisible(true);
-
-        //diese GUI beendet das Program beim schließen
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-
-        //öffnet sich in der Mitte
-        setLocationRelativeTo(null);
-
-        //größe auf 400, 400
-        setSize(400, 400);
-
-        //icon zu einem taschenrechner
-        ImageIcon img = new ImageIcon("icon.png");
-        setIconImage(img.getImage());
-
-
-
 
         //die Button schöner machen
         buttonElementar.setFocusPainted(false);
