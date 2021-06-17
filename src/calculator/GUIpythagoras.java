@@ -49,7 +49,6 @@ public class GUIpythagoras extends JFrame {
 
                 //first input jTextField is empty, the others not
                 if(katheteATextField.getText().equals("") && !katheteBTextField.getText().equals("") && !hypothenuseTextField.getText().equals(""))
-
                 {
                     param[1]=Double.parseDouble(hypothenuseTextField.getText());
                     param[2]=0;
