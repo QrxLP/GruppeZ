@@ -1,5 +1,4 @@
 package calculator;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -7,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
 public class GUIpythagoras extends JFrame {
+
     private JPanel rootPanel;
     private JTextField katheteATextField;
     private JTextField katheteBTextField;
@@ -15,23 +15,22 @@ public class GUIpythagoras extends JFrame {
     private JLabel katheteBLabel;
     private JLabel hypothenuseLabel;
     private JButton Calculate;
+
     private Logic logic;
 
-    public static void main(String[] args) {
-        new GUIpythagoras();
-    }
 
     public GUIpythagoras() {
 
         setTitle("Sart des Pythagoras");
-        logic = new Logic();
         setLocationRelativeTo(null);
+        add(rootPanel);
+        setSize(400,400);
+
+        logic = new Logic();
 
         katheteATextField.setText("");
         katheteATextField.setText("");
         hypothenuseTextField.setText("");
-        add(rootPanel);
-        setSize(400,400);
 
         Calculate.setMnemonic(KeyEvent.VK_ENTER);
         Calculate.setBorderPainted(false);
@@ -49,7 +48,6 @@ public class GUIpythagoras extends JFrame {
 
                 //first input jTextField is empty, the others not
                 if(katheteATextField.getText().equals("") && !katheteBTextField.getText().equals("") && !hypothenuseTextField.getText().equals(""))
-
                 {
                     param[1]=Double.parseDouble(hypothenuseTextField.getText());
                     param[2]=0;
@@ -89,5 +87,4 @@ public class GUIpythagoras extends JFrame {
             }
         });
     }
-
 }
