@@ -15,6 +15,7 @@ public class GUIscalar extends JFrame {
     private JTextField b3TextField;
     private JButton enterButton;
     private JLabel outputLabel;
+    private JLabel outputLabel2;
 
     private Logic logic;
 
@@ -45,7 +46,7 @@ public class GUIscalar extends JFrame {
                 temp[5] = Double.parseDouble(b2TextField.getText());
                 temp[6] = Double.parseDouble(b3TextField.getText());
 
-                outputLabel.setText("Winkel: " + String.valueOf(Math.toDegrees(logic.calc(temp)[1])));
+                outputLabel2.setText(String.valueOf(Math.toDegrees(logic.calc(temp)[1])));
             }
         });
     }

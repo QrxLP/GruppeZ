@@ -58,14 +58,14 @@ public class GUImanager extends JFrame {
         buttonMidnight.setFocusPainted(false);
         buttonMidnight.setBorderPainted(false);
 
-        //per default alle anderen frames unschichtbar machen
+        //per default alle anderen frames unsichtbar machen
         guiElementar.setVisible(false);
         guiPythagoras.setVisible(false);
         guiScalar.setVisible(false);
         guiVector.setVisible(false);
         guiMidnightFormular.setVisible(false);
 
-        //gui.fomrm und Gui,java verbinden
+
         add(rootPanel);
 
 
