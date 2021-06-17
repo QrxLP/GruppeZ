@@ -5,7 +5,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
 
 
 public class GUIvector extends JFrame {
@@ -20,7 +19,10 @@ public class GUIvector extends JFrame {
     private JTextField C2;
     private JTextField C3;
     private JButton enter;
-    private JLabel leftBracketLabel;
+    private JLabel inLeftBracketLabel;
+    private JLabel inRightBracketLabel;
+    private JLabel outLeftBracketLabel;
+    private JLabel outRightBracketLabel;
 
     Logic logic;
 
@@ -32,8 +34,10 @@ public class GUIvector extends JFrame {
 
         logic = new Logic();
 
-        leftBracketLabel.setFont(new Font("Bracket",Font.BOLD,200));
-
+        inLeftBracketLabel.setFont(new Font("Bracket",Font.PLAIN,140));
+        inRightBracketLabel.setFont(new Font("Bracket",Font.PLAIN,140));
+        outLeftBracketLabel.setFont(new Font("Bracket",Font.PLAIN,140));
+        outRightBracketLabel.setFont(new Font("Bracket",Font.PLAIN,140));
 
         enter.addActionListener(new ActionListener() {
             @Override

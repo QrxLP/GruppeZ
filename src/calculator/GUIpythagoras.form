@@ -44,6 +44,7 @@
             <properties>
               <background color="-13487565"/>
               <foreground color="-4671304"/>
+              <horizontalAlignment value="0"/>
             </properties>
           </component>
           <grid id="4c49e" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -92,6 +93,7 @@
             <properties>
               <background color="-13487565"/>
               <foreground color="-4671304"/>
+              <horizontalAlignment value="0"/>
             </properties>
           </component>
           <grid id="82a88" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -140,6 +142,7 @@
             <properties>
               <background color="-13487565"/>
               <foreground color="-4671304"/>
+              <horizontalAlignment value="0"/>
             </properties>
           </component>
           <grid id="df79c" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
