@@ -124,6 +124,4 @@ public class GUImanager extends JFrame {
             }
         });
     }
-
-
 }
