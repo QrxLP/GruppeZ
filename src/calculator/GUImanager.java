@@ -27,6 +27,7 @@ public class GUImanager extends JFrame {
     }
 
     GUImanager(){
+        //initialisieren der JFrames für die verschiedenen Berechnungen
         guiElementar = new GUIelementar();
         guiPythagoras = new GUIpythagoras();
         guiScalar = new GUIscalar();
@@ -34,18 +35,26 @@ public class GUImanager extends JFrame {
         guiMidnightFormular = new midnightFormula();
 
 
-
+        //diese GUI immer sichbar
         setVisible(true);
+
+        //diese GUI beendet das Program beim schließen
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        //öffnet sich in der Mitte
         setLocationRelativeTo(null);
+
+        //größe auf 400, 400
         setSize(400, 400);
+
+        //icon zu einem taschenrechner
         ImageIcon img = new ImageIcon("icon.png");
         setIconImage(img.getImage());
 
 
 
 
-
+        //die Button schöner machen
         buttonElementar.setFocusPainted(false);
         buttonElementar.setBorderPainted(false);
 
@@ -61,16 +70,19 @@ public class GUImanager extends JFrame {
         buttonMidnight.setFocusPainted(false);
         buttonMidnight.setBorderPainted(false);
 
-
+        //per default alle anderen frames unschichtbar machen
         guiElementar.setVisible(false);
         guiPythagoras.setVisible(false);
         guiScalar.setVisible(false);
         guiVector.setVisible(false);
         guiMidnightFormular.setVisible(false);
 
-
+        //gui.fomrm und Gui,java verbinden
         add(rootPanel);
 
+
+        //ActionListener für alle auswahlmöglichkeiten
+        //jeweils den ausgewählten Frame sichtbar und die andern unsichtbar machen
         buttonElementar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
