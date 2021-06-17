@@ -6,36 +6,30 @@ import java.awt.event.KeyEvent;
 
 public class GUIelementar extends JFrame {
 
-
-
-    private Logic logic;
     private JPanel rootPanel;
     private JButton enter;
-    private JTextField input1;
-    private JTextField input2;
     private JButton add;
     private JButton sub;
     private JButton mult;
     private JButton diff;
     private JLabel operator;
     private JLabel output;
+    private JTextField input1;
+    private JTextField input2;
+
     private int operatorNr;
+    private Logic logic;
 
-    public static void main (String[] args){
-
-    }
 
     public GUIelementar()
     {
 
         setTitle("Elementarrechnung");
-        logic = new Logic();
-        //setVisible(true);
-
         setLocationRelativeTo(null);
-
         add(rootPanel);
         setSize(400, 400);
+
+        logic = new Logic();
 
         enter.setBorderPainted(false);
         enter.setMnemonic(KeyEvent.VK_ENTER);
@@ -47,10 +41,6 @@ public class GUIelementar extends JFrame {
         mult.setMnemonic(KeyEvent.VK_MULTIPLY);
         diff.setBorderPainted(false);
         diff.setMnemonic(KeyEvent.VK_DIVIDE);
-
-
-
-
 
         add.addActionListener(new ActionListener() {
             @Override
@@ -85,21 +75,14 @@ public class GUIelementar extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 double[] param = new double[3];
                 double[] out = new double[3];
-                param[0] = operatorNr;
 
+                param[0] = operatorNr;
                 param[1] = Double.parseDouble(input1.getText());
                 param[2] = Double.parseDouble(input2.getText());
 
                 out = logic.calc(param);
-
                 output.setText(String.valueOf(out[0]));
             }
         });
     }
-
-    public void mSetVisible()
-    {
-
-    }
-
 }

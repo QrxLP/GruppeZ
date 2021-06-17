@@ -1,8 +1,8 @@
 package calculator;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 
 public class GUIscalar extends JFrame {
 
@@ -15,16 +15,21 @@ public class GUIscalar extends JFrame {
     private JTextField b3TextField;
     private JButton enterButton;
     private JLabel outputLabel;
+
     private Logic logic;
 
 
     GUIscalar(){
+
         setTitle("Skalarprodukt");
+        setLocationRelativeTo(null);
         add(rootPanel);
         setSize(400, 400 );
-        setLocationRelativeTo(null);
+
         logic = new Logic();
+
         enterButton.setBorderPainted(false);
+        enterButton.setMnemonic(KeyEvent.VK_ENTER);
 
         enterButton.addActionListener(new ActionListener() {
             @Override
@@ -40,12 +45,9 @@ public class GUIscalar extends JFrame {
                 temp[5] = Double.parseDouble(b2TextField.getText());
                 temp[6] = Double.parseDouble(b3TextField.getText());
 
-
-
                 outputLabel.setText("Winkel: " + String.valueOf(Math.toDegrees(logic.calc(temp)[1])));
             }
         });
     }
-
 }
 
