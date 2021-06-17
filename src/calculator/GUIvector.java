@@ -21,22 +21,19 @@ public class GUIvector extends JFrame {
     private JTextField C3;
     private JButton enter;
     private JLabel leftBracketLabel;
-    Logic logic;
 
-    public static void main(String [] args) {
-        new GUIvector();
-    }
+    Logic logic;
 
     GUIvector() {
         setTitle("Vektorprodukt");
         setLocationRelativeTo(null);
-
         add(rootPanel);
         setSize(400, 400);
-        setVisible(true);
+
+        logic = new Logic();
 
         leftBracketLabel.setFont(new Font("Bracket",Font.BOLD,200));
-        logic = new Logic();
+
 
         enter.addActionListener(new ActionListener() {
             @Override
