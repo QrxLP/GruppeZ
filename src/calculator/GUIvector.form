@@ -30,6 +30,7 @@
             </constraints>
             <properties>
               <background color="-13487565"/>
+              <foreground color="-4671304"/>
               <horizontalAlignment value="0"/>
             </properties>
           </component>
@@ -110,6 +111,7 @@
             </constraints>
             <properties>
               <background color="-13487565"/>
+              <foreground color="-4671304"/>
               <horizontalAlignment value="0"/>
             </properties>
           </component>
@@ -135,6 +137,7 @@
             </constraints>
             <properties>
               <background color="-13487565"/>
+              <foreground color="-4671304"/>
               <horizontalAlignment value="0"/>
             </properties>
           </component>
@@ -160,6 +163,7 @@
             </constraints>
             <properties>
               <background color="-13487565"/>
+              <foreground color="-4671304"/>
               <horizontalAlignment value="0"/>
             </properties>
           </component>
@@ -207,6 +211,7 @@
             </constraints>
             <properties>
               <background color="-13487565"/>
+              <foreground color="-4671304"/>
               <horizontalAlignment value="0"/>
             </properties>
           </component>
@@ -235,6 +240,7 @@
             </constraints>
             <properties>
               <background color="-13487565"/>
+              <foreground color="-4671304"/>
               <horizontalAlignment value="0"/>
               <text value=""/>
             </properties>
@@ -261,6 +267,7 @@
             </constraints>
             <properties>
               <background color="-13487565"/>
+              <foreground color="-4671304"/>
               <horizontalAlignment value="0"/>
             </properties>
           </component>
@@ -286,6 +293,7 @@
             </constraints>
             <properties>
               <background color="-13487565"/>
+              <foreground color="-4671304"/>
               <horizontalAlignment value="0"/>
             </properties>
           </component>
@@ -311,6 +319,7 @@
             </constraints>
             <properties>
               <background color="-13487565"/>
+              <foreground color="-4671304"/>
               <horizontalAlignment value="0"/>
             </properties>
           </component>

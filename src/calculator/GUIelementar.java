@@ -16,6 +16,7 @@ public class GUIelementar extends JFrame {
     private JLabel output;
     private JTextField input1;
     private JTextField input2;
+    private JButton ACButton;
 
     private int operatorNr;
     private Logic logic;
@@ -41,6 +42,8 @@ public class GUIelementar extends JFrame {
         mult.setMnemonic(KeyEvent.VK_MULTIPLY);
         diff.setBorderPainted(false);
         diff.setMnemonic(KeyEvent.VK_DIVIDE);
+        ACButton.setBorderPainted(false);
+        ACButton.setMnemonic(KeyEvent.VK_ESCAPE);
 
         add.addActionListener(new ActionListener() {
             @Override
