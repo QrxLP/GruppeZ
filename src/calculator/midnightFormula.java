@@ -18,6 +18,7 @@ public class midnightFormula extends JFrame{
     Logic logic;
 
     public midnightFormula(){
+        setTitle("Mitternachtsformel");
         logic = new Logic();
         setVisible(true);
         setLocationRelativeTo(null);

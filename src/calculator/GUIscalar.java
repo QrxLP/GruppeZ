@@ -19,6 +19,7 @@ public class GUIscalar extends JFrame {
 
 
     GUIscalar(){
+        setTitle("Skalarprodukt");
         add(rootPanel);
         setSize(400, 400 );
         setLocationRelativeTo(null);

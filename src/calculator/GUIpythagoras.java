@@ -21,6 +21,8 @@ public class GUIpythagoras extends JFrame {
     }
 
     public GUIpythagoras() {
+
+        setTitle("Sart des Pythagoras");
         logic = new Logic();
         setLocationRelativeTo(null);
 
