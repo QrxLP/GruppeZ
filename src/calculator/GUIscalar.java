@@ -1,5 +1,6 @@
 package calculator;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -26,11 +27,20 @@ public class GUIscalar extends JFrame {
         setLocationRelativeTo(null);
         add(rootPanel);
         setSize(400, 400 );
+        Color defaultColor=new Color(184,184,184);
 
         logic = new Logic();
 
         enterButton.setBorderPainted(false);
         enterButton.setMnemonic(KeyEvent.VK_ENTER);
+
+        a1TextField.setCaretColor(defaultColor);
+        a2TextField.setCaretColor(defaultColor);
+        a3TextField.setCaretColor(defaultColor);
+
+        b1TextField.setCaretColor(defaultColor);
+        b2TextField.setCaretColor(defaultColor);
+        b3TextField.setCaretColor(defaultColor);
 
         enterButton.addActionListener(new ActionListener() {
             @Override
