@@ -27,13 +27,6 @@ public class GUImanager extends JFrame {
     }
 
     GUImanager(){
-        guiElementar = new GUIelementar();
-        guiPythagoras = new GUIpythagoras();
-        guiScalar = new GUIscalar();
-        guiVector = new GUIvector();
-        guiMidnightFormular = new midnightFormula();
-
-
 
         setVisible(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -43,9 +36,13 @@ public class GUImanager extends JFrame {
         setIconImage(img.getImage());
 
 
+        guiElementar = new GUIelementar();
+        guiPythagoras = new GUIpythagoras();
+        guiScalar = new GUIscalar();
+        guiVector = new GUIvector();
+        guiMidnightFormular = new midnightFormula();
 
-
-
+        //die Button schöner machen
         buttonElementar.setFocusPainted(false);
         buttonElementar.setBorderPainted(false);
 
@@ -61,16 +58,19 @@ public class GUImanager extends JFrame {
         buttonMidnight.setFocusPainted(false);
         buttonMidnight.setBorderPainted(false);
 
-
+        //per default alle anderen frames unschichtbar machen
         guiElementar.setVisible(false);
         guiPythagoras.setVisible(false);
         guiScalar.setVisible(false);
         guiVector.setVisible(false);
         guiMidnightFormular.setVisible(false);
 
-
+        //gui.fomrm und Gui,java verbinden
         add(rootPanel);
 
+
+        //ActionListener für alle auswahlmöglichkeiten
+        //jeweils den ausgewählten Frame sichtbar und die andern unsichtbar machen
         buttonElementar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
