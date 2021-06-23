@@ -26,7 +26,6 @@ public class GUIpythagoras extends JFrame {
         setTitle("Satz des Pythagoras");
         logic = new Logic();
         setLocationRelativeTo(null);
-
         Color resultColor= new Color(4,135,217);
         Color textColor=new Color(184,184,184);
 
