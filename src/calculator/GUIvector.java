@@ -27,9 +27,11 @@ public class GUIvector extends JFrame {
     Logic logic;
 
     GUIvector() {
+        add(rootPanel);
+
         setTitle("Vektorprodukt");
         setLocationRelativeTo(null);
-        add(rootPanel);
+
         setSize(400, 400);
 
         logic = new Logic();

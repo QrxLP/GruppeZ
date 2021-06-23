@@ -2,9 +2,13 @@ package calculator;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.text.NumberFormat;
 
-public class GUIelementar extends JFrame {
+public class GUIelementar extends JFrame implements PropertyChangeListener {
 
     private JPanel rootPanel;
     private JButton enter;
@@ -14,12 +18,15 @@ public class GUIelementar extends JFrame {
     private JButton diff;
     private JLabel operator;
     private JLabel output;
-    private JTextField input1;
+    private JFormattedTextField input1;
     private JTextField input2;
     private JButton ACButton;
 
     private int operatorNr;
     private Logic logic;
+
+    private Double amount;
+    private NumberFormat amountFormat;
 
 
     public GUIelementar()
@@ -31,6 +38,13 @@ public class GUIelementar extends JFrame {
         setSize(400, 400);
 
         logic = new Logic();
+        amount = 10000.00;
+        setUpFormats();
+
+        input1 = new JFormattedTextField(amountFormat);
+        input1.setValue(new Double(amount));
+        input1.setColumns(10);
+        input1.addPropertyChangeListener("value", this);
 
         enter.setBorderPainted(false);
         enter.setMnemonic(KeyEvent.VK_ENTER);
@@ -45,7 +59,9 @@ public class GUIelementar extends JFrame {
         ACButton.setBorderPainted(false);
         ACButton.setMnemonic(KeyEvent.VK_ESCAPE);
 
-        //input1 = new JFormattedTextField()
+
+
+
         //todo farmattet text field
 
         add.addActionListener(new ActionListener() {
@@ -90,5 +106,20 @@ public class GUIelementar extends JFrame {
                 output.setText(String.valueOf(out[0]));
             }
         });
+        input1.addKeyListener(new KeyAdapter() {
+        });
+    }
+
+    @Override
+    public void propertyChange(PropertyChangeEvent e) {
+        Object source = e.getSource();
+        if (source == input1) {
+            amount = ((Number)input1.getValue()).doubleValue();
+        }
+
+    }
+
+    private void setUpFormats() {
+        amountFormat = NumberFormat.getNumberInstance();
     }
 }
