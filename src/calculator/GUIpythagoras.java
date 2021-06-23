@@ -32,15 +32,13 @@ public class GUIpythagoras extends JFrame {
         katheteATextField.setText("");
         katheteATextField.setText("");
         hypothenuseTextField.setText("");
-        katheteATextField.setCaretColor(textColor);
-        katheteATextField.setCaretColor(textColor);
-        hypothenuseTextField.setCaretColor(textColor);
 
-        add(rootPanel);
         setSize(400,400);
 
         Calculate.setMnemonic(KeyEvent.VK_ENTER);
         Calculate.setBorderPainted(false);
+
+        add(rootPanel);
 
         Calculate.addActionListener(new ActionListener() {
             @Override

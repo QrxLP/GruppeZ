@@ -46,6 +46,7 @@
                     </constraints>
                     <properties>
                       <background color="-13487565"/>
+                      <caretColor color="-4671304"/>
                       <foreground color="-4671304"/>
                       <text value=""/>
                     </properties>
@@ -58,6 +59,7 @@
                     </constraints>
                     <properties>
                       <background color="-13487565"/>
+                      <caretColor color="-4671304"/>
                       <foreground color="-4671304"/>
                       <text value=""/>
                     </properties>
@@ -70,6 +72,7 @@
                     </constraints>
                     <properties>
                       <background color="-13487565"/>
+                      <caretColor color="-4671304"/>
                       <foreground color="-4671304"/>
                       <text value=""/>
                     </properties>
@@ -121,6 +124,7 @@
                     </constraints>
                     <properties>
                       <background color="-13487565"/>
+                      <caretColor color="-4671304"/>
                       <foreground color="-4671304"/>
                       <text value=""/>
                     </properties>
@@ -133,6 +137,7 @@
                     </constraints>
                     <properties>
                       <background color="-13487565"/>
+                      <caretColor color="-4671304"/>
                       <foreground color="-4671304"/>
                       <text value=""/>
                     </properties>
@@ -145,6 +150,7 @@
                     </constraints>
                     <properties>
                       <background color="-13487565"/>
+                      <caretColor color="-4671304"/>
                       <foreground color="-4671304"/>
                       <text value=""/>
                     </properties>

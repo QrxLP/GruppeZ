@@ -42,6 +42,7 @@
             </constraints>
             <properties>
               <background color="-13487565"/>
+              <caretColor color="-4671304"/>
               <font name="Consolas" size="26" style="1"/>
               <foreground color="-4671304"/>
             </properties>
@@ -70,7 +71,7 @@
             <properties>
               <autoscrolls value="true"/>
               <background color="-13487565"/>
-              <caretColor color="-16777216"/>
+              <caretColor color="-4671304"/>
               <font name="Consolas" size="26" style="1"/>
               <foreground color="-4671304"/>
             </properties>

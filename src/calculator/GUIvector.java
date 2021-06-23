@@ -19,25 +19,19 @@ public class GUIvector extends JFrame {
     private JTextField C2;
     private JTextField C3;
     private JButton enter;
-    private JLabel inLeftBracketLabel;
-    private JLabel inRightBracketLabel;
-    private JLabel outLeftBracketLabel;
-    private JLabel outRightBracketLabel;
 
     Logic logic;
 
     GUIvector() {
         setTitle("Vektorprodukt");
         setLocationRelativeTo(null);
-        add(rootPanel);
         setSize(400, 400);
 
         logic = new Logic();
 
-        inLeftBracketLabel.setFont(new Font("Bracket",Font.PLAIN,140));
-        inRightBracketLabel.setFont(new Font("Bracket",Font.PLAIN,140));
-        outLeftBracketLabel.setFont(new Font("Bracket",Font.PLAIN,140));
-        outRightBracketLabel.setFont(new Font("Bracket",Font.PLAIN,140));
+        Color textColor=new Color(184,184,184);
+
+        add(rootPanel);
 
         enter.addActionListener(new ActionListener() {
             @Override
