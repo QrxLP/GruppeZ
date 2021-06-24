@@ -113,20 +113,38 @@ public class GUIelementar extends JFrame {
                 operator.setText("/");
             }
         });
+
+        readInputAndReturnOutput();
+    }
+
+    private void readInputAndReturnOutput(){
         enter.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                double[] param = new double[3];
-                double[] out = new double[3];
+                try {
+                    double[] param = new double[3];
+                    double[] out = new double[3];
 
-                param[0] = operatorNr;
-                param[1] = Double.parseDouble(input1.getText());
-                param[2] = Double.parseDouble(input2.getText());
+                    param[0] = operatorNr;
+                    param[1] = Double.parseDouble(input1.getText());
+                    param[2] = Double.parseDouble(input2.getText());
 
-                out = logic.calc(param);
-                output.setText(String.valueOf(out[0]));
+                    out = logic.calc(param);
+                    output.setText(String.valueOf(out[0]));
+
+                } catch (NumberFormatException | NullPointerException ex1) {
+                    ex1.printStackTrace();
+                    System.out.println("No input was found at one or more fields or Input is not " +
+                            "a double!");
+
+                } catch (ArrayIndexOutOfBoundsException ex2) {
+                    ex2.printStackTrace();
+                    System.out.println("Array out of bounds.");
+                }
+
             }
         });
+
 
 
         ACButton.addActionListener(new ActionListener() {
