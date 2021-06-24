@@ -58,6 +58,10 @@ public class GUImanager extends JFrame {
         buttonMidnight.setFocusPainted(false);
         buttonMidnight.setBorderPainted(false);
 
+        add(rootPanel);
+
+
+
         //per default alle anderen frames unsichtbar machen
         guiElementar.setVisible(false);
         guiPythagoras.setVisible(false);
@@ -66,7 +70,10 @@ public class GUImanager extends JFrame {
         guiMidnightFormular.setVisible(false);
 
 
-        add(rootPanel);
+
+
+
+
 
 
         //ActionListener für alle auswahlmöglichkeiten
