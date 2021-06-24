@@ -57,7 +57,7 @@
             <properties>
               <background color="-12763844"/>
               <foreground color="-4671304"/>
-              <text value="Scalarprodukt"/>
+              <text value="Skalarprodukt"/>
             </properties>
           </component>
           <component id="99d03" class="javax.swing.JButton" binding="buttonMidnight">
@@ -87,7 +87,7 @@
                 <properties>
                   <font size="16"/>
                   <foreground color="-4671304"/>
-                  <text value="was möchtest du berechnen?"/>
+                  <text value="Was möchtest du berechnen?"/>
                 </properties>
               </component>
             </children>

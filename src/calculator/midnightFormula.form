@@ -43,6 +43,7 @@
                   <background color="-13487565"/>
                   <caretColor color="-4671304"/>
                   <foreground color="-4671304"/>
+                  <horizontalAlignment value="0"/>
                 </properties>
               </component>
               <component id="73e50" class="javax.swing.JLabel">
@@ -87,6 +88,7 @@
                   <background color="-13487565"/>
                   <caretColor color="-4671304"/>
                   <foreground color="-4671304"/>
+                  <horizontalAlignment value="0"/>
                 </properties>
               </component>
               <component id="b623" class="javax.swing.JLabel">
@@ -131,6 +133,7 @@
                   <background color="-13487565"/>
                   <caretColor color="-4671304"/>
                   <foreground color="-4671304"/>
+                  <horizontalAlignment value="0"/>
                 </properties>
               </component>
               <component id="d82b7" class="javax.swing.JLabel">
@@ -185,6 +188,7 @@
                 </constraints>
                 <properties>
                   <background color="-13487565"/>
+                  <editable value="false"/>
                   <foreground color="-4671304"/>
                 </properties>
               </component>
@@ -221,6 +225,7 @@
                 </constraints>
                 <properties>
                   <background color="-13487565"/>
+                  <editable value="false"/>
                   <foreground color="-4671304"/>
                 </properties>
               </component>
