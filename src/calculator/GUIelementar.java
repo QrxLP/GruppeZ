@@ -54,14 +54,14 @@ public class GUIelementar extends JFrame {
         input1.addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
-                doFormating();
+                doFormating(input1);
             }
         });
 
         input2.addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
-                doFormating();
+                doFormating(input2);
             }
         });
 
@@ -129,17 +129,26 @@ public class GUIelementar extends JFrame {
         });
 
 
+        ACButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input1.setText(null);
+                input2.setText(null);
+            }
+        });
     }
 
-    private void doFormating() {
-        String text = input1.getText();
-        if (text.isEmpty()) return;
+    private void doFormating(JTextField field) {
+        String text = field.getText();
+        if (text.isEmpty() ){
+            return;
+        };
 
 
         try {
             lastDouble = Double.parseDouble(text);
         } catch (NumberFormatException ex) {
-            input1.setText(String.valueOf(lastDouble));
+            field.setText(String.valueOf(lastDouble));
         }
     }
 
