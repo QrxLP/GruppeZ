@@ -101,7 +101,7 @@ public class GUIpythagoras extends JFrame {
                 System.out.println("Action Performed");
             }
         };
-        rootPanel.getInputMap(3).put(KeyStroke.getKeyStroke("b"),"pressedEnter");
+        rootPanel.getInputMap(2).put(KeyStroke.getKeyStroke("b"),"pressedEnter");
         rootPanel.getActionMap().put("enterPressed",pressEnter);
     }
 
