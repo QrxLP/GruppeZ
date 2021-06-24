@@ -26,7 +26,7 @@ public class GUIvector extends JFrame {
         setTitle("Vektorprodukt");
         setLocationRelativeTo(null);
         setSize(400, 400);
-
+        enter.setBorderPainted(false);
         logic = new Logic();
 
         Color textColor=new Color(184,184,184);

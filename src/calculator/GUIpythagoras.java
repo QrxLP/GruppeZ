@@ -14,7 +14,7 @@ public class GUIpythagoras extends JFrame {
     private JLabel katheteALabel;
     private JLabel katheteBLabel;
     private JLabel hypothenuseLabel;
-    private JButton Calculate;
+    private JButton enter;
     private Logic logic;
 
     public static void main(String[] args) {
@@ -35,12 +35,15 @@ public class GUIpythagoras extends JFrame {
 
         setSize(400,400);
 
-        Calculate.setMnemonic(KeyEvent.VK_ENTER);
-        Calculate.setBorderPainted(false);
+        enter.setMnemonic(KeyEvent.VK_ENTER);
+        enter.setBorderPainted(false);
+
+        JButton enterButton = new JButton("Enter");
+        getRootPane().setDefaultButton(enterButton);
 
         add(rootPanel);
 
-        Calculate.addActionListener(new ActionListener() {
+        enter.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 double[] param =new double[4];
@@ -92,6 +95,14 @@ public class GUIpythagoras extends JFrame {
 
             }
         });
+        Action pressEnter = new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Action Performed");
+            }
+        };
+        rootPanel.getInputMap(3).put(KeyStroke.getKeyStroke("b"),"pressedEnter");
+        rootPanel.getActionMap().put("enterPressed",pressEnter);
     }
 
 }
