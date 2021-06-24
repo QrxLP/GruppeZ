@@ -28,9 +28,10 @@ public class GUImanager extends JFrame {
 
     GUImanager(){
 
+        add(rootPanel);
         setVisible(true);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(400, 400);
         ImageIcon img = new ImageIcon("icon.png");
         setIconImage(img.getImage());

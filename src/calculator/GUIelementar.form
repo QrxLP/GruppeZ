@@ -45,6 +45,7 @@
               <caretColor color="-4671304"/>
               <font name="Consolas" size="26" style="1"/>
               <foreground color="-4671304"/>
+              <horizontalAlignment value="0"/>
             </properties>
             <clientProperties>
               <html.disable class="java.lang.Boolean" value="false"/>
@@ -74,6 +75,7 @@
               <caretColor color="-4671304"/>
               <font name="Consolas" size="26" style="1"/>
               <foreground color="-4671304"/>
+              <horizontalAlignment value="0"/>
             </properties>
           </component>
         </children>
@@ -115,7 +117,7 @@
                     <properties>
                       <background color="-12763844"/>
                       <focusPainted value="false"/>
-                      <foreground color="-1"/>
+                      <foreground color="-4671304"/>
                       <label value="+"/>
                       <text value="+"/>
                     </properties>
@@ -127,7 +129,7 @@
                     <properties>
                       <background color="-12763844"/>
                       <focusPainted value="false"/>
-                      <foreground color="-1"/>
+                      <foreground color="-4671304"/>
                       <label value="-"/>
                       <text value="-"/>
                     </properties>
@@ -139,7 +141,7 @@
                     <properties>
                       <background color="-12763844"/>
                       <focusPainted value="false"/>
-                      <foreground color="-1"/>
+                      <foreground color="-4671304"/>
                       <label value="*"/>
                       <text value="*"/>
                     </properties>
@@ -151,7 +153,7 @@
                     <properties>
                       <background color="-12763844"/>
                       <focusPainted value="false"/>
-                      <foreground color="-1"/>
+                      <foreground color="-4671304"/>
                       <label value="/"/>
                       <text value="/"/>
                     </properties>
@@ -176,6 +178,7 @@
                 </constraints>
                 <properties>
                   <background color="-12895430"/>
+                  <foreground color="-4671304"/>
                   <text value="AC"/>
                 </properties>
               </component>
