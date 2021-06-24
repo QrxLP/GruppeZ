@@ -1,5 +1,10 @@
 package calculator;
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.text.DefaultFormatterFactory;
+import javax.swing.text.MaskFormatter;
+import javax.swing.text.NumberFormatter;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -7,8 +12,10 @@ import java.awt.event.KeyEvent;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.text.NumberFormat;
+import java.text.ParseException;
+import java.time.format.FormatStyle;
 
-public class GUIelementar extends JFrame implements PropertyChangeListener {
+public class GUIelementar extends JFrame {
 
     private JPanel rootPanel;
     private JButton enter;
@@ -18,19 +25,24 @@ public class GUIelementar extends JFrame implements PropertyChangeListener {
     private JButton diff;
     private JLabel operator;
     private JLabel output;
-    private JFormattedTextField input1;
+    private JTextField input1;
     private JTextField input2;
     private JButton ACButton;
+    private Formatting formatting;
 
     private int operatorNr;
     private Logic logic;
 
-    private Double amount;
-    private NumberFormat amountFormat;
+    double lastDouble = 0.0;
+
+
+
 
 
     public GUIelementar()
     {
+
+
 
         setTitle("Elementarrechnung");
         setLocationRelativeTo(null);
@@ -38,13 +50,22 @@ public class GUIelementar extends JFrame implements PropertyChangeListener {
         setSize(400, 400);
 
         logic = new Logic();
-        amount = 10000.00;
-        setUpFormats();
 
-        input1 = new JFormattedTextField(amountFormat);
-        input1.setValue(new Double(amount));
-        input1.setColumns(10);
-        input1.addPropertyChangeListener("value", this);
+        input1.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                doFormating();
+            }
+        });
+
+        input2.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                doFormating();
+            }
+        });
+
+
 
         enter.setBorderPainted(false);
         enter.setMnemonic(KeyEvent.VK_ENTER);
@@ -106,20 +127,21 @@ public class GUIelementar extends JFrame implements PropertyChangeListener {
                 output.setText(String.valueOf(out[0]));
             }
         });
-        input1.addKeyListener(new KeyAdapter() {
-        });
+
+
     }
 
-    @Override
-    public void propertyChange(PropertyChangeEvent e) {
-        Object source = e.getSource();
-        if (source == input1) {
-            amount = ((Number)input1.getValue()).doubleValue();
+    private void doFormating() {
+        String text = input1.getText();
+        if (text.isEmpty()) return;
+
+
+        try {
+            lastDouble = Double.parseDouble(text);
+        } catch (NumberFormatException ex) {
+            input1.setText(String.valueOf(lastDouble));
         }
-
     }
 
-    private void setUpFormats() {
-        amountFormat = NumberFormat.getNumberInstance();
-    }
+
 }
