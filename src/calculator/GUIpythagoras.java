@@ -95,6 +95,7 @@ public class GUIpythagoras extends JFrame {
 
             }
         });
+        rootPanel.requestFocus();
         Action pressEnter = new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
