@@ -42,21 +42,34 @@ public class GUIscalar extends JFrame {
         b2TextField.setCaretColor(defaultColor);
         b3TextField.setCaretColor(defaultColor);
 
+        readAndCalc();
+    }
+    public void readAndCalc(){
         enterButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                double[] temp;
-                temp = new double[7];
+                try{
+                    double[] temp;
+                    temp = new double[7];
 
-                temp[0]=6;
-                temp[1] = Double.parseDouble(a1TextField.getText());
-                temp[2] = Double.parseDouble(a2TextField.getText());
-                temp[3] = Double.parseDouble(a3TextField.getText());
-                temp[4] = Double.parseDouble(b1TextField.getText());
-                temp[5] = Double.parseDouble(b2TextField.getText());
-                temp[6] = Double.parseDouble(b3TextField.getText());
+                    temp[0]=6;
+                    temp[1] = Double.parseDouble(a1TextField.getText());
+                    temp[2] = Double.parseDouble(a2TextField.getText());
+                    temp[3] = Double.parseDouble(a3TextField.getText());
+                    temp[4] = Double.parseDouble(b1TextField.getText());
+                    temp[5] = Double.parseDouble(b2TextField.getText());
+                    temp[6] = Double.parseDouble(b3TextField.getText());
 
-                outputLabel2.setText(String.valueOf(Math.toDegrees(logic.calc(temp)[1])));
+                    outputLabel2.setText(String.valueOf(Math.toDegrees(logic.calc(temp)[1])));
+                } catch (NumberFormatException | NullPointerException ex1) {
+                    ex1.printStackTrace();
+                    System.out.println("No input was found at one or more fields or Input is not " +
+                            "a double!");
+
+                } catch (ArrayIndexOutOfBoundsException ex2) {
+                    ex2.printStackTrace();
+                    System.out.println("Array out of bounds.");
+                }
             }
         });
     }
