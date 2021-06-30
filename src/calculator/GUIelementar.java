@@ -1,19 +1,9 @@
 package calculator;
 import javax.swing.*;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
-import javax.swing.text.DefaultFormatterFactory;
-import javax.swing.text.MaskFormatter;
-import javax.swing.text.NumberFormatter;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.text.NumberFormat;
-import java.text.ParseException;
-import java.time.format.FormatStyle;
 
 public class GUIelementar extends JFrame {
 
@@ -114,10 +104,10 @@ public class GUIelementar extends JFrame {
             }
         });
 
-        readInputAndReturnOutput();
+        readAndCalc();
     }
 
-    private void readInputAndReturnOutput(){
+    private void readAndCalc(){
         enter.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
