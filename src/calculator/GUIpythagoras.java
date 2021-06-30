@@ -102,7 +102,19 @@ public class GUIpythagoras extends JFrame {
             }
         });
 
-        rootPanel.requestFocus();
+        KeyStroke pressedEnter = KeyStroke.getKeyStroke(KeyEvent.VK_ENTER,Event.CTRL_MASK);
+        Action useEnter = new AbstractAction("Berechnen") {
+            public void actionPerformed(ActionEvent e) {
+                //do your save
+                System.out.println("save");
+            }
+        };
+
+        JButton enter = new JButton(useEnter);
+        enter.getActionMap().put("useEnter", useEnter);
+        enter.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(pressedEnter, "useEnter");
+
+        /*rootPanel.requestFocus();
         Action pressEnter = new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -110,7 +122,7 @@ public class GUIpythagoras extends JFrame {
             }
         };
         rootPanel.getInputMap(2).put(KeyStroke.getKeyStroke("b"),"pressedEnter");
-        rootPanel.getActionMap().put("enterPressed",pressEnter);
+        rootPanel.getActionMap().put("enterPressed",pressEnter);*/
     }
 
 }
