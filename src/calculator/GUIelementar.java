@@ -33,7 +33,8 @@ public class GUIelementar extends JFrame {
     private int operatorNr;
     private Logic logic;
 
-    double lastDouble = 0.0;
+    double lastDouble1 = 0.0;
+    double lastDouble2 = 0.0;
 
 
 
@@ -54,14 +55,14 @@ public class GUIelementar extends JFrame {
         input1.addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
-                doFormating(input1);
+                lastDouble1 = doFormating (input1, lastDouble1);
             }
         });
 
         input2.addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
-                doFormating(input2);
+                lastDouble2 = doFormating(input2, lastDouble2);
             }
         });
 
@@ -156,10 +157,10 @@ public class GUIelementar extends JFrame {
         });
     }
 
-    private void doFormating(JTextField field) {
+    private double doFormating(JTextField field, double lastDouble) {
         String text = field.getText();
         if (text.isEmpty() ){
-            return;
+            return 0.0;
         };
 
 
@@ -168,6 +169,7 @@ public class GUIelementar extends JFrame {
         } catch (NumberFormatException ex) {
             field.setText(String.valueOf(lastDouble));
         }
+        return lastDouble;
     }
 
 
