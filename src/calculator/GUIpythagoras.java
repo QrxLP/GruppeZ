@@ -46,55 +46,62 @@ public class GUIpythagoras extends JFrame {
         enter.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                double[] param =new double[4];
-                param[0]=7;
-                katheteATextField.setForeground(textColor); //changes the color back to the default text color, important for consecutive calculations
-                katheteBTextField.setForeground(textColor);
-                hypothenuseTextField.setForeground(textColor);
+                try {
+                    double[] param = new double[4];
+                    param[0] = 7;
+                    katheteATextField.setForeground(textColor); //changes the color back to the default text color, important for consecutive calculations
+                    katheteBTextField.setForeground(textColor);
+                    hypothenuseTextField.setForeground(textColor);
 
-                //first input jTextField is empty, the others not
-                if(katheteATextField.getText().equals("") && !katheteBTextField.getText().equals("") && !hypothenuseTextField.getText().equals(""))
-                {
-                    param[1]=Double.parseDouble(hypothenuseTextField.getText());
-                    param[2]=0;
-                    param[3]=Double.parseDouble(katheteBTextField.getText());
-                    double[] out= logic.calc(param);
-                    double outNumber =(Math.round(out[0] * 100.0) / 100.0);
-                    katheteATextField.setText(String.valueOf(outNumber));
-                    katheteATextField.setForeground(resultColor);
-                }
-                //second input jTextField is empty, the others not
-                else if(katheteBTextField.getText().equals("") && !katheteATextField.getText().equals("") && !hypothenuseTextField.getText().equals(""))
-                {
-                    param[1]=Double.parseDouble(hypothenuseTextField.getText());
-                    param[2]=Double.parseDouble(katheteATextField.getText());
-                    param[3]=0;
-                    double[] out= logic.calc(param);
-                    double outNumber =(Math.round(out[0] * 100.0) / 100.0);
-                    katheteBTextField.setText(String.valueOf(outNumber));
-                    katheteBTextField.setForeground(resultColor);
-                }
-                //third input jTextField is empty, the others not
-                else if(hypothenuseTextField.getText().equals("") && !katheteATextField.getText().equals("") && !katheteBTextField.getText().equals(""))
-                {
-                    param[1]=0;
-                    param[2]=Double.parseDouble(katheteATextField.getText());
-                    param[3]=Double.parseDouble(katheteBTextField.getText());
-                    double[] out= logic.calc(param);
-                    double outNumber =(Math.round(out[0] * 100.0) / 100.0);
-                    hypothenuseTextField.setText(String.valueOf(outNumber));
-                    hypothenuseTextField.setForeground(resultColor);
-                }
-                //multiple input jTextFields are empty or all are full
-                else
-                {
-                    katheteATextField.setText("");
-                    katheteBTextField.setText("");
-                    hypothenuseTextField.setText("");
-                }
+                    //first input jTextField is empty, the others not
+                    if (katheteATextField.getText().equals("") && !katheteBTextField.getText().equals("") && !hypothenuseTextField.getText().equals("")) {
+                        param[1] = Double.parseDouble(hypothenuseTextField.getText());
+                        param[2] = 0;
+                        param[3] = Double.parseDouble(katheteBTextField.getText());
+                        double[] out = logic.calc(param);
+                        double outNumber = (Math.round(out[0] * 100.0) / 100.0);
+                        katheteATextField.setText(String.valueOf(outNumber));
+                        katheteATextField.setForeground(resultColor);
+                    }
+                    //second input jTextField is empty, the others not
+                    else if (katheteBTextField.getText().equals("") && !katheteATextField.getText().equals("") && !hypothenuseTextField.getText().equals("")) {
+                        param[1] = Double.parseDouble(hypothenuseTextField.getText());
+                        param[2] = Double.parseDouble(katheteATextField.getText());
+                        param[3] = 0;
+                        double[] out = logic.calc(param);
+                        double outNumber = (Math.round(out[0] * 100.0) / 100.0);
+                        katheteBTextField.setText(String.valueOf(outNumber));
+                        katheteBTextField.setForeground(resultColor);
+                    }
+                    //third input jTextField is empty, the others not
+                    else if (hypothenuseTextField.getText().equals("") && !katheteATextField.getText().equals("") && !katheteBTextField.getText().equals("")) {
+                        param[1] = 0;
+                        param[2] = Double.parseDouble(katheteATextField.getText());
+                        param[3] = Double.parseDouble(katheteBTextField.getText());
+                        double[] out = logic.calc(param);
+                        double outNumber = (Math.round(out[0] * 100.0) / 100.0);
+                        hypothenuseTextField.setText(String.valueOf(outNumber));
+                        hypothenuseTextField.setForeground(resultColor);
+                    }
+                    //multiple input jTextFields are empty or all are full
+                    else {
+                        katheteATextField.setText("");
+                        katheteBTextField.setText("");
+                        hypothenuseTextField.setText("");
+                    }
+                } catch (NumberFormatException | NullPointerException ex1) {
+                ex1.printStackTrace();
+                System.out.println("No input was found at one or more fields or Input is not " +
+                        "a double!");
+
+            } catch (ArrayIndexOutOfBoundsException ex2) {
+                ex2.printStackTrace();
+                System.out.println("Array out of bounds.");
+            }
 
             }
         });
+
         rootPanel.requestFocus();
         Action pressEnter = new AbstractAction() {
             @Override
