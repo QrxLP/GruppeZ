@@ -6,3 +6,16 @@ TODOs:
 -zweimal enter drücken = Felder löschen 
 -Exceptions vervollständigen (leere Eingabefelder)
 -scalarprodukt winkel geht noch nicht :(
+
+Lukas:
+Skalar
+Vektor
+
+Max:
+Logic
+Elementar 
+Manager
+
+Michi:
+Pythagoras 
+Mitternachtsformel
