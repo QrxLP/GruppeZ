@@ -73,7 +73,7 @@ public class GUIelementar extends JFrame {
 
 
 
-        //todo farmattet text field
+
 
         add.addActionListener(new ActionListener() {
             @Override
