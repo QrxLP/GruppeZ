@@ -15,11 +15,10 @@ public class midnightFormula extends JFrame{
     private JTextField textField4;
     private JTextField textField5;
     private JLabel resultPossibleLabel;
-    Logic logic;
+
 
     public midnightFormula(){
         setTitle("Mitternachtsformel");
-        logic = new Logic();
         setVisible(true);
         setLocationRelativeTo(null);
         add(rootPanel);
@@ -50,7 +49,7 @@ public class midnightFormula extends JFrame{
 
 
 
-                    double[] output = logic.calc(input);
+                    double[] output = Logic.calc(input);
                     if(output[2] == 1) {
                         textField4.setText("N/A");
                         textField5.setText("N/A");

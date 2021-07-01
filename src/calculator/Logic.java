@@ -23,7 +23,7 @@ public class Logic {
      * @param input Array of numbers to be calculated
      * @return Result of the calculation
      */
-    public double[] calc(double[] input)
+    public static double[] calc(double[] input)
     {
         //First number in array for decision of operation
         int op = (int)input[0];
@@ -69,7 +69,7 @@ public class Logic {
      * @param input Numbers to be added
      * @return Result
      */
-    public double[] add(double[] input)
+    public static double[] add(double[] input)
     {
         double[] res=new double[1];
         res[0]=input[0]+input[1];
@@ -81,7 +81,7 @@ public class Logic {
      * @param input Numbers to be subtracted
      * @return Result
      */
-    public double[] subtract(double[] input)
+    public static double[] subtract(double[] input)
     {
         double[] res=new double[1];
         res[0]=input[0]-input[1];
@@ -93,7 +93,7 @@ public class Logic {
      * @param input Numbers to be multiplied
      * @return Result
      */
-    public double[] multiply(double[] input)
+    public static double[] multiply(double[] input)
     {
         double[] res=new double[1];
         res[0]=input[0]*input[1];
@@ -105,7 +105,7 @@ public class Logic {
      * @param input Numbers to be divided
      * @return Result
      */
-    public double[] divide(double[] input)
+    public static double[] divide(double[] input)
     {
         double[] res=new double[1];
         res[0]=input[0]/input[1];
