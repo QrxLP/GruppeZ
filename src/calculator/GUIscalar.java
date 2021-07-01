@@ -70,8 +70,6 @@ public class GUIscalar extends JFrame {
         setSize(400, 400 );
         Color defaultColor=new Color(184,184,184);
 
-
-
         enterButton.setBorderPainted(false);
         enterButton.setMnemonic(KeyEvent.VK_ENTER);
 

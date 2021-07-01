@@ -40,10 +40,16 @@ public class GUIpythagoras extends JFrame {
 
         add(rootPanel);
 
+        readAndCalc();
+
+
+    }
+
+    private void readAndCalc(){
         enter.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                myReadAndCalc();
+                calculate();
 
             }
         })
@@ -52,7 +58,7 @@ public class GUIpythagoras extends JFrame {
         actionMap.put("action_enter", new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                myReadAndCalc();
+                calculate();
             }
         });
 
@@ -62,10 +68,9 @@ public class GUIpythagoras extends JFrame {
         SwingUtilities.replaceUIActionMap(rootPanel, actionMap);
         SwingUtilities.replaceUIInputMap(rootPanel, JComponent.WHEN_IN_FOCUSED_WINDOW,
                 keyMap);
-
-
     }
-    private void myReadAndCalc(){
+
+    private void calculate(){
         Color resultColor= new Color(4,135,217);
         Color textColor=new Color(184,184,184);
 

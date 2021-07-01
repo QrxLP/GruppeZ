@@ -16,9 +16,6 @@ public class midnightFormula extends JFrame{
 
     public midnightFormula(){
         prepareGUI();
-        resultPossibleLabel.setVisible(false);
-        enter.setBorderPainted(false);
-        enter.setMnemonic(KeyEvent.VK_ENTER);
         readAndcalc();
     }
 
@@ -28,6 +25,10 @@ public class midnightFormula extends JFrame{
         setLocationRelativeTo(null);
         setSize(400,400);
         setVisible(false);
+
+        resultPossibleLabel.setVisible(false);
+        enter.setBorderPainted(false);
+        enter.setMnemonic(KeyEvent.VK_ENTER);
     }
 
     private void readAndcalc(){
