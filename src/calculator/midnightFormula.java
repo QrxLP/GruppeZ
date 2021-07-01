@@ -1,12 +1,10 @@
 package calculator;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
 public class midnightFormula extends JFrame{
-
     private JPanel rootPanel;
     private JButton enter;
     private JTextField textField1;
@@ -16,23 +14,20 @@ public class midnightFormula extends JFrame{
     private JTextField textField5;
     private JLabel resultPossibleLabel;
 
-
     public midnightFormula(){
-        setTitle("Mitternachtsformel");
-        setVisible(true);
-        setLocationRelativeTo(null);
-        add(rootPanel);
-        setSize(400,400);
+        prepareGUI();
         resultPossibleLabel.setVisible(false);
-
         enter.setBorderPainted(false);
         enter.setMnemonic(KeyEvent.VK_ENTER);
-
         readAndcalc();
+    }
 
-
-
-
+    private void prepareGUI(){
+        add(rootPanel);
+        setTitle("Mitternachtsformel");
+        setLocationRelativeTo(null);
+        setSize(400,400);
+        setVisible(false);
     }
 
     private void readAndcalc(){

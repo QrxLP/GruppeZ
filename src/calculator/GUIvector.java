@@ -29,6 +29,7 @@ public class GUIvector extends JFrame {
         setTitle("Vektorprodukt");
         setLocationRelativeTo(null);
         setSize(400, 400);
+        setVisible(false);
     }
 
     private void readAndCalc() {
