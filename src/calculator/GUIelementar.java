@@ -21,7 +21,7 @@ public class GUIelementar extends JFrame {
     private Formatting formatting;
 
     private int operatorNr;
-    private Logic logic;
+
 
     double lastDouble1 = 0.0;
     double lastDouble2 = 0.0;
@@ -40,7 +40,6 @@ public class GUIelementar extends JFrame {
         add(rootPanel);
         setSize(400, 400);
 
-        logic = new Logic();
 
         input1.addKeyListener(new KeyAdapter() {
             @Override
@@ -120,7 +119,7 @@ public class GUIelementar extends JFrame {
                     param[1] = Double.parseDouble(input1.getText());
                     param[2] = Double.parseDouble(input2.getText());
 
-                    out = logic.calc(param);
+                    out = Logic.calc(param);
                     output.setText(String.valueOf(out[0]));
 
                 } catch (NumberFormatException | NullPointerException ex1) {

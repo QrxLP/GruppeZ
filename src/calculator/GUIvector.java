@@ -20,7 +20,6 @@ public class GUIvector extends JFrame {
     private JTextField C3;
     private JButton enter;
 
-    Logic logic;
 
     GUIvector() {
         add(rootPanel);
@@ -28,7 +27,7 @@ public class GUIvector extends JFrame {
         setLocationRelativeTo(null);
         setSize(400, 400);
         enter.setBorderPainted(false);
-        logic = new Logic();
+
 
         Color textColor = new Color(184, 184, 184);
 
@@ -36,12 +35,9 @@ public class GUIvector extends JFrame {
         readAndCalc();
     }
 
+    private void prepareGUI(){
 
-
-
-
-
-
+    }
 
     private void readAndCalc() {
         try {
@@ -60,7 +56,7 @@ public class GUIvector extends JFrame {
                     input[6] = Double.parseDouble(c2.getText());
 
                     double[] output = new double[3];
-                    output = logic.calc(input);
+                    output = Logic.calc(input);
                     C1.setText(String.valueOf(output[0]));
                     C2.setText(String.valueOf(output[1]));
                     C3.setText(String.valueOf(output[2]));
