@@ -5,3 +5,4 @@ TODOs:
 -evtl. "ACButton" überall einfügen
 -zweimal enter drücken = Felder löschen 
 -Exceptions vervollständigen (leere Eingabefelder)
+-scalarprodukt winkel geht noch nicht :(
