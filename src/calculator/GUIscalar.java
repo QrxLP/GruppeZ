@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 public class GUIscalar extends JFrame {
@@ -18,7 +19,18 @@ public class GUIscalar extends JFrame {
     private JLabel outputLabel;
     private JLabel outputLabel2;
 
+    double lastDoublea1 = 0.0;
+    double lastDoublea2 = 0.0;
+    double lastDoublea3 = 0.0;
+    double lastDoubleb1 = 0.0;
+    double lastDoubleb2 = 0.0;
+    double lastDoubleb3 = 0.0;
 
+
+
+
+
+    private Logic logic;
 
 
     GUIscalar(){
@@ -29,7 +41,7 @@ public class GUIscalar extends JFrame {
         setSize(400, 400 );
         Color defaultColor=new Color(184,184,184);
 
-
+        logic = new Logic();
 
         enterButton.setBorderPainted(false);
         enterButton.setMnemonic(KeyEvent.VK_ENTER);
@@ -43,6 +55,49 @@ public class GUIscalar extends JFrame {
         b3TextField.setCaretColor(defaultColor);
 
         readAndCalc();
+        a1TextField.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                super.keyTyped(e);
+                lastDoublea1 = doFormating(a1TextField, lastDoublea1);
+            }
+        });
+        a2TextField.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                super.keyTyped(e);
+                lastDoublea2 = doFormating(a2TextField, lastDoublea2);
+            }
+        });
+        a3TextField.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                super.keyTyped(e);
+                lastDoublea3 = doFormating(a3TextField, lastDoublea3);
+            }
+        });
+
+        b1TextField.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                super.keyTyped(e);
+                lastDoubleb1 = doFormating(b1TextField, lastDoubleb1);
+            }
+        });
+        b2TextField.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                super.keyTyped(e);
+                lastDoubleb2 = doFormating(b2TextField, lastDoubleb2);
+            }
+        });
+        b3TextField.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                super.keyTyped(e);
+                lastDoubleb3 = doFormating(b3TextField, lastDoubleb3);
+            }
+        });
     }
     public void readAndCalc(){
         enterButton.addActionListener(new ActionListener() {
@@ -60,7 +115,7 @@ public class GUIscalar extends JFrame {
                     temp[5] = Double.parseDouble(b2TextField.getText());
                     temp[6] = Double.parseDouble(b3TextField.getText());
 
-                    outputLabel2.setText(String.valueOf(Math.toDegrees(Logic.calc(temp)[1])));
+                    outputLabel2.setText(String.valueOf(Math.toDegrees(logic.calc(temp)[1])));
                 } catch (NumberFormatException | NullPointerException ex1) {
                     ex1.printStackTrace();
                     System.out.println("No input was found at one or more fields or Input is not " +
@@ -73,5 +128,19 @@ public class GUIscalar extends JFrame {
             }
         });
     }
-}
 
+    private double doFormating(JTextField field, double lastDouble) {
+        String text = field.getText();
+        if (text.isEmpty() ){
+            return 0.0;
+        };
+
+
+        try {
+            lastDouble = Double.parseDouble(text);
+        } catch (NumberFormatException ex) {
+            field.setText(String.valueOf(lastDouble));
+        }
+        return lastDouble;
+    }
+}
