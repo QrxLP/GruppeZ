@@ -29,6 +29,12 @@ public class GUImanager extends JFrame {
     GUImanager(){
 
         add(rootPanel);
+        setTitle("Rechner");
+        setLocationRelativeTo(null);
+        setSize(400, 400);
+        setVisible(true);
+
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         //die Button schöner machen
         buttonElementar.setFocusPainted(false);
@@ -45,14 +51,12 @@ public class GUImanager extends JFrame {
 
         buttonMidnight.setFocusPainted(false);
         buttonMidnight.setBorderPainted(false);
-        setVisible(true);
-        setLocationRelativeTo(null);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setSize(400, 400);
+
+        //icon ändern
         ImageIcon img = new ImageIcon("icon.png");
         setIconImage(img.getImage());
 
-
+        //alle GUI objekte erzeugen
         guiElementar = new GUIelementar();
         guiPythagoras = new GUIpythagoras();
         guiScalar = new GUIscalar();
