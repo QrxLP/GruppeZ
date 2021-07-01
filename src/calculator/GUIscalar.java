@@ -28,8 +28,43 @@ public class GUIscalar extends JFrame {
 
 
     GUIscalar(){
+        prepareGUI();
+        readAndCalc();
 
+    }
+    public void readAndCalc(){
+        enterButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try{
+                    double[] temp;
+                    temp = new double[7];
+
+                    temp[0]=6;
+                    temp[1] = Double.parseDouble(a1TextField.getText());
+                    temp[2] = Double.parseDouble(a2TextField.getText());
+                    temp[3] = Double.parseDouble(a3TextField.getText());
+                    temp[4] = Double.parseDouble(b1TextField.getText());
+                    temp[5] = Double.parseDouble(b2TextField.getText());
+                    temp[6] = Double.parseDouble(b3TextField.getText());
+
+                    outputLabel2.setText(String.valueOf(Math.toDegrees(Logic.calc(temp)[1])));
+                } catch (NumberFormatException | NullPointerException ex1) {
+                    ex1.printStackTrace();
+                    System.out.println("No input was found at one or more fields or Input is not " +
+                            "a double!");
+
+                } catch (ArrayIndexOutOfBoundsException ex2) {
+                    ex2.printStackTrace();
+                    System.out.println("Array out of bounds.");
+                }
+            }
+        });
+    }
+
+    private void prepareGUI(){
         setTitle("Skalarprodukt");
+        setVisible(false);
         setLocationRelativeTo(null);
         add(rootPanel);
         setSize(400, 400 );
@@ -48,7 +83,7 @@ public class GUIscalar extends JFrame {
         b2TextField.setCaretColor(defaultColor);
         b3TextField.setCaretColor(defaultColor);
 
-        readAndCalc();
+
         a1TextField.addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
@@ -92,35 +127,7 @@ public class GUIscalar extends JFrame {
                 lastDoubleb3 = doFormating(b3TextField, lastDoubleb3);
             }
         });
-    }
-    public void readAndCalc(){
-        enterButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try{
-                    double[] temp;
-                    temp = new double[7];
 
-                    temp[0]=6;
-                    temp[1] = Double.parseDouble(a1TextField.getText());
-                    temp[2] = Double.parseDouble(a2TextField.getText());
-                    temp[3] = Double.parseDouble(a3TextField.getText());
-                    temp[4] = Double.parseDouble(b1TextField.getText());
-                    temp[5] = Double.parseDouble(b2TextField.getText());
-                    temp[6] = Double.parseDouble(b3TextField.getText());
-
-                    outputLabel2.setText(String.valueOf(Math.toDegrees(Logic.calc(temp)[1])));
-                } catch (NumberFormatException | NullPointerException ex1) {
-                    ex1.printStackTrace();
-                    System.out.println("No input was found at one or more fields or Input is not " +
-                            "a double!");
-
-                } catch (ArrayIndexOutOfBoundsException ex2) {
-                    ex2.printStackTrace();
-                    System.out.println("Array out of bounds.");
-                }
-            }
-        });
     }
 
     private double doFormating(JTextField field, double lastDouble) {
