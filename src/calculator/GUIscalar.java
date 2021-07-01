@@ -27,12 +27,6 @@ public class GUIscalar extends JFrame {
     double lastDoubleb3 = 0.0;
 
 
-
-
-
-    private Logic logic;
-
-
     GUIscalar(){
 
         setTitle("Skalarprodukt");
@@ -41,7 +35,7 @@ public class GUIscalar extends JFrame {
         setSize(400, 400 );
         Color defaultColor=new Color(184,184,184);
 
-        logic = new Logic();
+
 
         enterButton.setBorderPainted(false);
         enterButton.setMnemonic(KeyEvent.VK_ENTER);
@@ -115,7 +109,7 @@ public class GUIscalar extends JFrame {
                     temp[5] = Double.parseDouble(b2TextField.getText());
                     temp[6] = Double.parseDouble(b3TextField.getText());
 
-                    outputLabel2.setText(String.valueOf(Math.toDegrees(logic.calc(temp)[1])));
+                    outputLabel2.setText(String.valueOf(Math.toDegrees(Logic.calc(temp)[1])));
                 } catch (NumberFormatException | NullPointerException ex1) {
                     ex1.printStackTrace();
                     System.out.println("No input was found at one or more fields or Input is not " +
