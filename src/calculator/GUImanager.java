@@ -27,7 +27,11 @@ public class GUImanager extends JFrame {
     }
 
     GUImanager(){
+        setupGUI();
+        readAndCalc();
+    }
 
+    private void setupGUI(){
         add(rootPanel);
         setTitle("Rechner");
         setLocationRelativeTo(null);
@@ -63,12 +67,6 @@ public class GUImanager extends JFrame {
         guiVector = new GUIvector();
         guiMidnightFormular = new midnightFormula();
 
-
-
-
-
-
-
         //per default alle anderen frames unsichtbar machen
         guiElementar.setVisible(false);
         guiPythagoras.setVisible(false);
@@ -76,13 +74,9 @@ public class GUImanager extends JFrame {
         guiVector.setVisible(false);
         guiMidnightFormular.setVisible(false);
 
+    }
 
-
-
-
-
-
-
+    private void readAndCalc(){
         //ActionListener für alle auswahlmöglichkeiten
         //jeweils den ausgewählten Frame sichtbar und die andern unsichtbar machen
         buttonElementar.addActionListener(new ActionListener() {
