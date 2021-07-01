@@ -1,11 +1,8 @@
 package calculator;
-
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 
 public class GUIvector extends JFrame {
     private JPanel rootPanel;
@@ -20,23 +17,18 @@ public class GUIvector extends JFrame {
     private JTextField C3;
     private JButton enter;
 
-
     GUIvector() {
-        add(rootPanel);
-        setTitle("Vektorprodukt");
-        setLocationRelativeTo(null);
-        setSize(400, 400);
+        prepareGUI();
         enter.setBorderPainted(false);
-
-
         Color textColor = new Color(184, 184, 184);
-
-        add(rootPanel);
         readAndCalc();
     }
 
     private void prepareGUI(){
-
+        add(rootPanel);
+        setTitle("Vektorprodukt");
+        setLocationRelativeTo(null);
+        setSize(400, 400);
     }
 
     private void readAndCalc() {
