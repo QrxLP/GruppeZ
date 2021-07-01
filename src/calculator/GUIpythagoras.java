@@ -50,11 +50,10 @@ public class GUIpythagoras extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 calculate();
-
             }
-        })
+        });
 
-        ;ActionMap actionMap = new ActionMapUIResource();
+        ActionMap actionMap = new ActionMapUIResource();
         actionMap.put("action_enter", new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -1,5 +1,6 @@
 package calculator;
 import javax.swing.*;
+import javax.swing.plaf.ActionMapUIResource;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -34,10 +35,32 @@ public class GUIvector extends JFrame {
     }
 
     private void readAndCalc() {
+        enter.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculate();
+            }
+        });
+
+        ActionMap actionMap = new ActionMapUIResource();
+        actionMap.put("action_enter", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculate();
+            }
+        });
+
+        InputMap keyMap = new ComponentInputMap(rootPanel);
+        keyMap.put(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ENTER,
+                0), "action_enter");
+        SwingUtilities.replaceUIActionMap(rootPanel, actionMap);
+        SwingUtilities.replaceUIInputMap(rootPanel, JComponent.WHEN_IN_FOCUSED_WINDOW,
+                keyMap);
+    }
+
+    private void calculate(){
         try {
-            enter.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
+
                     double input[] = new double[7];
                     //Designation for Vectorproduct
                     input[0] = 6;
@@ -54,8 +77,6 @@ public class GUIvector extends JFrame {
                     C1.setText(String.valueOf(output[0]));
                     C2.setText(String.valueOf(output[1]));
                     C3.setText(String.valueOf(output[2]));
-                }
-            });
         } catch (NumberFormatException | NullPointerException ex1) {
             ex1.printStackTrace();
             System.out.println("No input was found at one or more fields or Input is not " +
