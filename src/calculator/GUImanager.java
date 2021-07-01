@@ -29,19 +29,6 @@ public class GUImanager extends JFrame {
     GUImanager(){
 
         add(rootPanel);
-        setVisible(true);
-        setLocationRelativeTo(null);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setSize(400, 400);
-        ImageIcon img = new ImageIcon("icon.png");
-        setIconImage(img.getImage());
-
-
-        guiElementar = new GUIelementar();
-        guiPythagoras = new GUIpythagoras();
-        guiScalar = new GUIscalar();
-        guiVector = new GUIvector();
-        guiMidnightFormular = new midnightFormula();
 
         //die Button schöner machen
         buttonElementar.setFocusPainted(false);
@@ -58,8 +45,23 @@ public class GUImanager extends JFrame {
 
         buttonMidnight.setFocusPainted(false);
         buttonMidnight.setBorderPainted(false);
+        setVisible(true);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setSize(400, 400);
+        ImageIcon img = new ImageIcon("icon.png");
+        setIconImage(img.getImage());
 
-        add(rootPanel);
+
+        guiElementar = new GUIelementar();
+        guiPythagoras = new GUIpythagoras();
+        guiScalar = new GUIscalar();
+        guiVector = new GUIvector();
+        guiMidnightFormular = new midnightFormula();
+
+
+
+
 
 
 
