@@ -59,17 +59,11 @@ public class GUIelementar extends JFrame {
 
 
         enter.setBorderPainted(false);
-        enter.setMnemonic(KeyEvent.VK_ENTER);
         add.setBorderPainted(false);
-        add.setMnemonic(KeyEvent.VK_ADD);
         sub.setBorderPainted(false);
-        sub.setMnemonic(KeyEvent.VK_SUBTRACT);
         mult.setBorderPainted(false);
-        mult.setMnemonic(KeyEvent.VK_MULTIPLY);
         diff.setBorderPainted(false);
-        diff.setMnemonic(KeyEvent.VK_DIVIDE);
         ACButton.setBorderPainted(false);
-        ACButton.setMnemonic(KeyEvent.VK_ESCAPE);
 
         readAndCalc();
     }
