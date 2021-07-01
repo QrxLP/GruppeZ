@@ -27,8 +27,18 @@ public class GUImanager extends JFrame {
     }
 
     GUImanager(){
+        setupGUI();
+        readAndCalc();
+    }
 
+    private void setupGUI(){
         add(rootPanel);
+        setTitle("Rechner");
+        setLocationRelativeTo(null);
+        setSize(400, 400);
+        setVisible(true);
+
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         //die Button schöner machen
         buttonElementar.setFocusPainted(false);
@@ -45,25 +55,17 @@ public class GUImanager extends JFrame {
 
         buttonMidnight.setFocusPainted(false);
         buttonMidnight.setBorderPainted(false);
-        setVisible(true);
-        setLocationRelativeTo(null);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setSize(400, 400);
+
+        //icon ändern
         ImageIcon img = new ImageIcon("icon.png");
         setIconImage(img.getImage());
 
-
+        //alle GUI objekte erzeugen
         guiElementar = new GUIelementar();
         guiPythagoras = new GUIpythagoras();
         guiScalar = new GUIscalar();
         guiVector = new GUIvector();
         guiMidnightFormular = new midnightFormula();
-
-
-
-
-
-
 
         //per default alle anderen frames unsichtbar machen
         guiElementar.setVisible(false);
@@ -72,13 +74,9 @@ public class GUImanager extends JFrame {
         guiVector.setVisible(false);
         guiMidnightFormular.setVisible(false);
 
+    }
 
-
-
-
-
-
-
+    private void readAndCalc(){
         //ActionListener für alle auswahlmöglichkeiten
         //jeweils den ausgewählten Frame sichtbar und die andern unsichtbar machen
         buttonElementar.addActionListener(new ActionListener() {

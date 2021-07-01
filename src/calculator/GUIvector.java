@@ -19,8 +19,6 @@ public class GUIvector extends JFrame {
 
     GUIvector() {
         prepareGUI();
-        enter.setBorderPainted(false);
-        Color textColor = new Color(184, 184, 184);
         readAndCalc();
     }
 
@@ -29,6 +27,10 @@ public class GUIvector extends JFrame {
         setTitle("Vektorprodukt");
         setLocationRelativeTo(null);
         setSize(400, 400);
+        setVisible(false);
+
+        enter.setBorderPainted(false);
+        Color textColor = new Color(184, 184, 184);
     }
 
     private void readAndCalc() {
