@@ -8,6 +8,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+/**
+ * Implementiert das GUI für die Berechnung mit dem Satz des Pythagoras und die Übergabe der Eingabewerte an Logic zur Berechnung
+ */
 public class GUIpythagoras extends JFrame {
     private JPanel rootPanel;
 
@@ -35,6 +38,9 @@ public class GUIpythagoras extends JFrame {
         prepareGUI();
     }
 
+    /**
+     * Baut die GUI auf, d.h. konfiguriert gewisse JComponents und fügt KeyListener und ActionListener hinzu
+     */
     private void prepareGUI() {
         add(rootPanel);
         setTitle("Satz des Pythagoras");
@@ -48,6 +54,7 @@ public class GUIpythagoras extends JFrame {
         enter.setBorderPainted(false);
         ACButton.setBorderPainted(false);
 
+        //Fügt Keylistener hinzu. Wichtig für Formattierung der Eingabewerte
         katheteATextField.addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
@@ -70,6 +77,7 @@ public class GUIpythagoras extends JFrame {
             }
         });
 
+        //Fügt ActionListener, ActionMap und InputMap hinzu. Wichtig für Hotkeys
         enter.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -107,16 +115,20 @@ public class GUIpythagoras extends JFrame {
                 keyMap);
     }
 
+    /**
+     * Übergibt die, in die JTextFields eingegebenen Werte an Logic zur Berechnung und zeigt das Ergebnis im Ausgabefeld an. Hierbei ist das Ausgabefeld jeweils das JTextField,
+     * in das nichts eingegeben wurde
+     */
     private void calculate(){
 
         try {
             double[] param = new double[4];
             param[0] = 7;
-            katheteATextField.setForeground(TEXT_COLOR); //changes the color back to the default text color, important for consecutive calculations
+            katheteATextField.setForeground(TEXT_COLOR); //Setzt Farbe auf TEXT_COLOR um bei aufeinanderfolgenden Rechnungen nicht mehrere Felder in RESULT_COLOR zu haben
             katheteBTextField.setForeground(TEXT_COLOR);
             hypothenuseTextField.setForeground(TEXT_COLOR);
 
-            //first input jTextField is empty, the others not
+            //erstes input JTextField (katheteATextField) ist leer, die anderen nicht
             if (katheteATextField.getText().equals("") && !katheteBTextField.getText().equals("") && !hypothenuseTextField.getText().equals("")) {
                 param[1] = Double.parseDouble(hypothenuseTextField.getText());
                 param[2] = 0;
@@ -126,7 +138,7 @@ public class GUIpythagoras extends JFrame {
                 katheteATextField.setText(String.valueOf(outNumber));
                 katheteATextField.setForeground(RESULT_COLOR);
             }
-            //second input jTextField is empty, the others not
+            //zweites input JTextField (katheteBTextField) ist leer, die anderen nicht
             else if (katheteBTextField.getText().equals("") && !katheteATextField.getText().equals("") && !hypothenuseTextField.getText().equals("")) {
                 param[1] = Double.parseDouble(hypothenuseTextField.getText());
                 param[2] = Double.parseDouble(katheteATextField.getText());
@@ -136,7 +148,7 @@ public class GUIpythagoras extends JFrame {
                 katheteBTextField.setText(String.valueOf(outNumber));
                 katheteBTextField.setForeground(RESULT_COLOR);
             }
-            //third input jTextField is empty, the others not
+            //drittes input JTextField (hypothenuseTextField) ist leer, die anderen nicht
             else if (hypothenuseTextField.getText().equals("") && !katheteATextField.getText().equals("") && !katheteBTextField.getText().equals("")) {
                 param[1] = 0;
                 param[2] = Double.parseDouble(katheteATextField.getText());
@@ -146,7 +158,7 @@ public class GUIpythagoras extends JFrame {
                 hypothenuseTextField.setText(String.valueOf(outNumber));
                 hypothenuseTextField.setForeground(RESULT_COLOR);
             }
-            //multiple input jTextFields are empty or all are full
+            //mehrere JTextFields sind leer oder alle sind voll
             else {
                 katheteATextField.setText("");
                 katheteBTextField.setText("");
@@ -166,6 +178,9 @@ public class GUIpythagoras extends JFrame {
         }
     }
 
+    /**
+     * Leert alle Felder des Rechners und setzt Textfarbe zurück
+     */
     private void ACAction(){
         katheteATextField.setText("");
         katheteBTextField.setText("");
@@ -175,6 +190,12 @@ public class GUIpythagoras extends JFrame {
         hypothenuseTextField.setForeground(TEXT_COLOR);
     }
 
+    /**
+     * Formatiert Eingabewerte, d.h. lässt nur double als Datentyp zu
+     * @param field
+     * @param lastDouble
+     * @return double
+     */
     private double doFormating(JTextField field, double lastDouble) {
         String text = field.getText();
         if (text.isEmpty() ){
