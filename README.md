@@ -14,4 +14,4 @@ VektorGUI als Vorbild
 
     Michi:Pythagoras, Mitternachtsformel
 
--Checkliste:Formatting, Exceptions, Hotkeys, Aufbau(PrepareGui, Calculate, ReadAndCalc), KOMMENTARE auf deutsch
+-Checkliste:Formatting, Exceptions, Hotkeys, Aufbau(PrepareGui, Calculate), KOMMENTARE auf deutsch
