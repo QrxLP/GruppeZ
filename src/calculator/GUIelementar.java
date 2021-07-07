@@ -20,40 +20,23 @@ public class GUIelementar extends JFrame {
     private JTextField input1;
     private JTextField input2;
     private JButton ACButton;
-    private Formatting formatting;
-
     private int operatorNr;
-
-
     double lastDouble1 = 0.0;
     double lastDouble2 = 0.0;
 
     public GUIelementar()
     {
+        prepareGUI();
+        readAndCalc();
+    }
 
 
-
+    public void prepareGUI(){
+        add(rootPanel);
         setTitle("Elementarrechnung");
         setLocationRelativeTo(null);
-        add(rootPanel);
         setSize(400, 400);
-
-
-        input1.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyReleased(KeyEvent e) {
-                lastDouble1 = doFormating (input1, lastDouble1);
-            }
-        });
-
-        input2.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyReleased(KeyEvent e) {
-                lastDouble2 = doFormating(input2, lastDouble2);
-            }
-        });
-
-
+        setVisible(false);
 
         enter.setBorderPainted(false);
         add.setBorderPainted(false);
@@ -62,8 +45,20 @@ public class GUIelementar extends JFrame {
         diff.setBorderPainted(false);
         ACButton.setBorderPainted(false);
 
-        readAndCalc();
+        input1.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                lastDouble1 = doFormating (input1, lastDouble1);
+            }
+        });
+        input2.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                lastDouble2 = doFormating(input2, lastDouble2);
+            }
+        });
     }
+
 
     private void readAndCalc(){
         enter.addActionListener(new ActionListener() {
