@@ -210,7 +210,7 @@ public class GUIpythagoras extends JFrame {
         String text = field.getText();
         if (text.isEmpty() ){
             return 0.0;
-        };
+        }
 
 
         try {

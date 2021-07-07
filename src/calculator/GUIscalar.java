@@ -1,7 +1,6 @@
 package calculator;
 import javax.swing.*;
 import javax.swing.plaf.ActionMapUIResource;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -28,9 +27,6 @@ public class GUIscalar extends JFrame {
     double lastDoubleb1 = 0.0;
     double lastDoubleb2 = 0.0;
     double lastDoubleb3 = 0.0;
-
-    private final Color TEXT_COLOR = new Color(184,184,184);
-    private final Color RESULT_COLOR = new Color(4,135,217);
 
     GUIscalar(){
         prepareGUI();
@@ -111,7 +107,6 @@ public class GUIscalar extends JFrame {
         setLocationRelativeTo(null);
         add(rootPanel);
         setSize(400, 400 );
-        Color defaultColor=new Color(184,184,184);
 
         enterButton.setBorderPainted(false);
         ACButton.setBorderPainted(false);
@@ -179,7 +174,7 @@ public class GUIscalar extends JFrame {
         String text = field.getText();
         if (text.isEmpty() ){
             return 0.0;
-        };
+        }
 
 
         try {

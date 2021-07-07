@@ -1,7 +1,6 @@
 package calculator;
 import javax.swing.*;
 import javax.swing.plaf.ActionMapUIResource;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -165,7 +164,7 @@ public class midnightFormula extends JFrame{
         String text = field.getText();
         if (text.isEmpty() ){
             return 0.0;
-        };
+        }
 
 
         try {
