@@ -10,39 +10,43 @@ import java.awt.event.KeyEvent;
 
 public class GUIpythagoras extends JFrame {
     private JPanel rootPanel;
+
     private JTextField katheteATextField;
     private JTextField katheteBTextField;
     private JTextField hypothenuseTextField;
+
     private JLabel katheteALabel;
     private JLabel katheteBLabel;
     private JLabel hypothenuseLabel;
+
     private JButton enter;
     private JButton ACButton;
+
     private Double lastDoubleKatheteA = 0.0;
     private Double lastDoubleKatheteB = 0.0;
     private Double lastDoubleKHypotenuse = 0.0;
+
     private final Color TEXT_COLOR = new Color(184,184,184);
     private final Color RESULT_COLOR = new Color(4,135,217);
 
 
 
     public GUIpythagoras() {
+        prepareGUI();
+    }
 
+    private void prepareGUI() {
+        add(rootPanel);
         setTitle("Satz des Pythagoras");
-
         setLocationRelativeTo(null);
+        setSize(400,400);
 
         katheteATextField.setText("");
         katheteBTextField.setText("");
         hypothenuseTextField.setText("");
 
-        setSize(400,400);
-
         enter.setBorderPainted(false);
         ACButton.setBorderPainted(false);
-
-        add(rootPanel);
-
 
         katheteATextField.addKeyListener(new KeyAdapter() {
             @Override
@@ -66,12 +70,6 @@ public class GUIpythagoras extends JFrame {
             }
         });
 
-        readAndCalc();
-
-
-    }
-
-    private void readAndCalc(){
         enter.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

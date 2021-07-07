@@ -108,16 +108,18 @@ public class midnightFormula extends JFrame{
             input[2] = Double.parseDouble(textField2.getText());
             input[3] = Double.parseDouble(textField3.getText());
 
-
-
+            //output wird auf 2 Nachkommastellen gerundet
             double[] output = Logic.calc(input);
+            double outNumber1 = (Math.round(output[0] * 100.0) / 100.0);
+            double outNumber2 = (Math.round(output[1] * 100.0) / 100.0);
+
             if(output[2] == 1) {
                 textField4.setText("N/A");
                 textField5.setText("N/A");
                 resultPossibleLabel.setVisible(true);
             } else {
-                textField4.setText(String.valueOf(output[0]));
-                textField5.setText(String.valueOf(output[1]));
+                textField4.setText(String.valueOf(outNumber1));
+                textField5.setText(String.valueOf(outNumber2));
             }
         } catch (NumberFormatException ex1) {
             ex1.printStackTrace();

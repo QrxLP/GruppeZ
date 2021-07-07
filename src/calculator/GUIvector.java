@@ -33,8 +33,6 @@ public class GUIvector extends JFrame {
 
     GUIvector() {
         prepareGUI();
-        readAndCalc();
-
     }
 
     private void prepareGUI(){
@@ -46,7 +44,6 @@ public class GUIvector extends JFrame {
 
         enter.setBorderPainted(false);
         ACButton.setBorderPainted(false);
-        Color textColor = new Color(184, 184, 184);
 
         a1.addKeyListener(new KeyAdapter() {
             @Override
@@ -84,9 +81,7 @@ public class GUIvector extends JFrame {
                 lastDoublec2 = doFormating (c2, lastDoublec2);
             }
         });
-    }
 
-    private void readAndCalc() {
         enter.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
