@@ -90,13 +90,17 @@ public class GUIscalar extends JFrame {
 
             outputLabel2.setText(String.valueOf((Logic.calc(temp)[1])));
             outputLable1.setText(String.valueOf((Logic.calc(temp)[0])));
-        } catch (NumberFormatException | NullPointerException ex1) {
+        } catch (NumberFormatException ex1) {
             ex1.printStackTrace();
-            System.out.println("No input was found at one or more fields or Input is not " +
+            System.out.println("Input is not " +
                     "a double!");
 
-        } catch (ArrayIndexOutOfBoundsException ex2) {
+        }catch (NullPointerException ex2){
             ex2.printStackTrace();
+            System.out.println("No input was found at one or more fields");
+        }
+        catch (ArrayIndexOutOfBoundsException ex3) {
+            ex3.printStackTrace();
             System.out.println("Array out of bounds.");
         }
     }
@@ -168,13 +172,7 @@ public class GUIscalar extends JFrame {
         outputLabel2.setText("");
         outputLable1.setText("");
 
-        a1TextField.setForeground(TEXT_COLOR);
-        a2TextField.setForeground(TEXT_COLOR);
-        a3TextField.setForeground(TEXT_COLOR);
-        b1TextField.setForeground(TEXT_COLOR);
-        b2TextField.setForeground(TEXT_COLOR);
-        b3TextField.setForeground(TEXT_COLOR);
-        outputLabel2.setForeground(TEXT_COLOR);
+
     }
 
     private double doFormating(JTextField field, double lastDouble) {
