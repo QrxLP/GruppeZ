@@ -32,7 +32,6 @@ public class GUIpythagoras extends JFrame {
 
         setSize(400,400);
 
-        enter.setMnemonic(KeyEvent.VK_ENTER);
         enter.setBorderPainted(false);
 
         JButton enterButton = new JButton("Enter");
