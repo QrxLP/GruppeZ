@@ -164,14 +164,6 @@ public class GUIscalar extends JFrame {
         b2TextField.setText("");
         b3TextField.setText("");
         outputLabel2.setText("");
-
-        a1TextField.setForeground(TEXT_COLOR);
-        a2TextField.setForeground(TEXT_COLOR);
-        a3TextField.setForeground(TEXT_COLOR);
-        b1TextField.setForeground(TEXT_COLOR);
-        b2TextField.setForeground(TEXT_COLOR);
-        b3TextField.setForeground(TEXT_COLOR);
-        outputLabel2.setForeground(TEXT_COLOR);
     }
 
     private double doFormating(JTextField field, double lastDouble) {

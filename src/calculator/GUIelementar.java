@@ -192,9 +192,6 @@ public class GUIelementar extends JFrame {
         input1.setText(null);
         input2.setText(null);
         output.setText(null);
-        input1.setForeground(TEXT_COLOR);
-        input2.setForeground(TEXT_COLOR);
-        output.setForeground(TEXT_COLOR);
     }
     private void addAction(){
         operatorNr= 0;

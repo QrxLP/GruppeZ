@@ -137,12 +137,6 @@ public class midnightFormula extends JFrame{
         textField3.setText("");
         textField4.setText("");
         textField5.setText("");
-
-        textField1.setForeground(TEXT_COLOR);
-        textField2.setForeground(TEXT_COLOR);
-        textField3.setForeground(TEXT_COLOR);
-        textField4.setForeground(TEXT_COLOR);
-        textField5.setForeground(TEXT_COLOR);
     }
 
     private double doFormating(JTextField field, double lastDouble) {

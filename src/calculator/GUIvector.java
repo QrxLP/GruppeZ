@@ -164,16 +164,6 @@ public class GUIvector extends JFrame {
         C1.setText("");
         C2.setText("");
         C3.setText("");
-
-        a1.setForeground(TEXT_COLOR);
-        a2.setForeground(TEXT_COLOR);
-        b1.setForeground(TEXT_COLOR);
-        b2.setForeground(TEXT_COLOR);
-        c1.setForeground(TEXT_COLOR);
-        c2.setForeground(TEXT_COLOR);
-        C1.setForeground(TEXT_COLOR);
-        C2.setForeground(TEXT_COLOR);
-        C3.setForeground(TEXT_COLOR);
     }
 
     private double doFormating(JTextField field, double lastDouble) {
