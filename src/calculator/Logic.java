@@ -166,44 +166,50 @@ public class Logic {
         double b2;
         double b3;
         double scalar_product; // result variable
-        double [] result;
+        double[] result;
+        boolean isReturnable = false;
 
 
         //Initializing the array which returns the result and the variables which save the values from the input array.
         a1 = input[0];
-        a2 = input [1];
-        a3 = input [2];
-        b1 = input [3];
-        b2 = input [4];
-        b3 = input [5];
-        result = new double [2];
+        a2 = input[1];
+        a3 = input[2];
+        b1 = input[3];
+        b2 = input[4];
+        b3 = input[5];
+        result = new double[2];
 
 
         //Logic
-        scalar_product = a1 * b1 + a2 * b2 + a3 * b3;
+        //scalar_product = a1 * b1 + a2 * b2 + a3 * b3;
 
 
         //Filling result array and returning it.
-        result [0] = scalar_product;
+        //result[0] = scalar_product;
 
 
         //winkel
-        // todo radiant umwandeln
+
         double zähler;
         double nenner;
 
-        zähler = result[0];
-        double [] a;
-        a = new double[]{input[0], input[1], input[3]};
 
-        double [] b;
-        b = new double[]{input[0], input[1], input[3]};
+        double[] a;
+        a = new double[]{input[0], input[1], input[2]};
+
+        double[] b;
+        b = new double[]{input[3], input[4], input[5]};
+
+        zähler = a1 * b1 + a2 * b2 + a3 * b3;
         nenner = vector_lenght(a)[0] + vector_lenght(b)[0];
 
 
-        result[1] = Math.acos(zähler / nenner);
-        return result;
+        result[0] = zähler;
+        result[1] = Math.toDegrees(Math.acos(zähler / nenner));
 
+
+
+        return result;
     }
 
     public static double[] vector_lenght(double[] input){

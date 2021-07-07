@@ -17,9 +17,10 @@ public class GUIscalar extends JFrame {
     private JTextField b2TextField;
     private JTextField b3TextField;
     private JButton enterButton;
-    private JLabel outputLabel;
     private JLabel outputLabel2;
     private JButton ACButton;
+    private JLabel outputLable1;
+    private JLabel outputLabel;
 
     double lastDoublea1 = 0.0;
     double lastDoublea2 = 0.0;
@@ -27,6 +28,9 @@ public class GUIscalar extends JFrame {
     double lastDoubleb1 = 0.0;
     double lastDoubleb2 = 0.0;
     double lastDoubleb3 = 0.0;
+
+    private final Color TEXT_COLOR = new Color(184,184,184);
+    private final Color RESULT_COLOR = new Color(4,135,217);
 
     GUIscalar(){
         prepareGUI();
@@ -76,7 +80,7 @@ public class GUIscalar extends JFrame {
             double[] temp;
             temp = new double[7];
 
-            temp[0]=6;
+            temp[0]=5;
             temp[1] = Double.parseDouble(a1TextField.getText());
             temp[2] = Double.parseDouble(a2TextField.getText());
             temp[3] = Double.parseDouble(a3TextField.getText());
@@ -84,17 +88,15 @@ public class GUIscalar extends JFrame {
             temp[5] = Double.parseDouble(b2TextField.getText());
             temp[6] = Double.parseDouble(b3TextField.getText());
 
-            outputLabel2.setText(String.valueOf(Math.toDegrees(Logic.calc(temp)[1])));
-        } catch (NumberFormatException ex1) {
+            outputLabel2.setText(String.valueOf((Logic.calc(temp)[1])));
+            outputLable1.setText(String.valueOf((Logic.calc(temp)[0])));
+        } catch (NumberFormatException | NullPointerException ex1) {
             ex1.printStackTrace();
-            System.out.println("Input is not a double!");
+            System.out.println("No input was found at one or more fields or Input is not " +
+                    "a double!");
 
-        }catch (NullPointerException ex2){
+        } catch (ArrayIndexOutOfBoundsException ex2) {
             ex2.printStackTrace();
-            System.out.println("No input was found at one or more fields");
-        }
-        catch (ArrayIndexOutOfBoundsException ex3) {
-            ex3.printStackTrace();
             System.out.println("Array out of bounds.");
         }
     }
@@ -164,6 +166,15 @@ public class GUIscalar extends JFrame {
         b2TextField.setText("");
         b3TextField.setText("");
         outputLabel2.setText("");
+        outputLable1.setText("");
+
+        a1TextField.setForeground(TEXT_COLOR);
+        a2TextField.setForeground(TEXT_COLOR);
+        a3TextField.setForeground(TEXT_COLOR);
+        b1TextField.setForeground(TEXT_COLOR);
+        b2TextField.setForeground(TEXT_COLOR);
+        b3TextField.setForeground(TEXT_COLOR);
+        outputLabel2.setForeground(TEXT_COLOR);
     }
 
     private double doFormating(JTextField field, double lastDouble) {
