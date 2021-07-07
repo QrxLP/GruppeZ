@@ -7,15 +7,13 @@ TODOs:
 -Exceptions vervollständigen (leere Eingabefelder)
 -scalarprodukt winkel geht noch nicht :(
 
-Lukas:
-Skalar
-Vektor
+-prepareGUI und anderes: 
+VektorGUI als Vorbild
 
-Max:
-Logic
-Elementar 
-Manager
+    Lukas:Skalar, Vektor
 
-Michi:
-Pythagoras 
-Mitternachtsformel
+    Max:Logic, Elementar, Manager
+
+    Michi:Pythagoras, Mitternachtsformel
+
+-Checkliste:Formatting, Exceptions, Hotkeys, Aufbau(PrepareGui, Calculate, ReadAndCalc), KOMMENTARE auf deutsch
