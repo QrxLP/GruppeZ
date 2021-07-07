@@ -123,7 +123,8 @@ public class GUIpythagoras extends JFrame {
 
         try {
             double[] param = new double[4];
-            param[0] = 7;
+            param[0] = 7; //Kennziffer für Satz des Pythagoras
+
             katheteATextField.setForeground(TEXT_COLOR); //Setzt Farbe auf TEXT_COLOR um bei aufeinanderfolgenden Rechnungen nicht mehrere Felder in RESULT_COLOR zu haben
             katheteBTextField.setForeground(TEXT_COLOR);
             hypothenuseTextField.setForeground(TEXT_COLOR);
@@ -133,30 +134,39 @@ public class GUIpythagoras extends JFrame {
                 param[1] = Double.parseDouble(hypothenuseTextField.getText());
                 param[2] = 0;
                 param[3] = Double.parseDouble(katheteBTextField.getText());
+
+                //output wird auf 2 Nachkommastellen gerundet
                 double[] out = Logic.calc(param);
                 double outNumber = (Math.round(out[0] * 100.0) / 100.0);
+
                 katheteATextField.setText(String.valueOf(outNumber));
-                katheteATextField.setForeground(RESULT_COLOR);
+                katheteATextField.setForeground(RESULT_COLOR); //Färbt Ergebnis in RESULT_COLOR zur besseren Erkennung
             }
             //zweites input JTextField (katheteBTextField) ist leer, die anderen nicht
             else if (katheteBTextField.getText().equals("") && !katheteATextField.getText().equals("") && !hypothenuseTextField.getText().equals("")) {
                 param[1] = Double.parseDouble(hypothenuseTextField.getText());
                 param[2] = Double.parseDouble(katheteATextField.getText());
                 param[3] = 0;
+
+                //output wird auf 2 Nachkommastellen gerundet
                 double[] out = Logic.calc(param);
                 double outNumber = (Math.round(out[0] * 100.0) / 100.0);
+
                 katheteBTextField.setText(String.valueOf(outNumber));
-                katheteBTextField.setForeground(RESULT_COLOR);
+                katheteBTextField.setForeground(RESULT_COLOR); //Färbt Ergebnis in RESULT_COLOR zur besseren Erkennung
             }
             //drittes input JTextField (hypothenuseTextField) ist leer, die anderen nicht
             else if (hypothenuseTextField.getText().equals("") && !katheteATextField.getText().equals("") && !katheteBTextField.getText().equals("")) {
                 param[1] = 0;
                 param[2] = Double.parseDouble(katheteATextField.getText());
                 param[3] = Double.parseDouble(katheteBTextField.getText());
+
+                //output wird auf 2 Nachkommastellen gerundet
                 double[] out = Logic.calc(param);
                 double outNumber = (Math.round(out[0] * 100.0) / 100.0);
+
                 hypothenuseTextField.setText(String.valueOf(outNumber));
-                hypothenuseTextField.setForeground(RESULT_COLOR);
+                hypothenuseTextField.setForeground(RESULT_COLOR); //Färbt Ergebnis in RESULT_COLOR zur besseren Erkennung
             }
             //mehrere JTextFields sind leer oder alle sind voll
             else {

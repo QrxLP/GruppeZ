@@ -7,28 +7,34 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+/**
+ * Implementiert das GUI für die Berechnung mit der Mitternachtsformel und die Übergabe der Eingabewerte an Logic zur Berechnung
+ *  */
 public class midnightFormula extends JFrame{
     private JPanel rootPanel;
-    private JButton enter;
+
     private JTextField textField1;
     private JTextField textField2;
     private JTextField textField3;
     private JTextField textField4;
     private JTextField textField5;
+
     private JLabel resultPossibleLabel;
+
+    private JButton enter;
     private JButton ACButton;
+
     private Double lastDoublea1 = 0.0;
     private Double lastDoublea2 = 0.0;
     private Double lastDoublea3 = 0.0;
 
-    private final Color TEXT_COLOR = new Color(184,184,184);
-    private final Color RESULT_COLOR = new Color(4,135,217);
-
     public midnightFormula(){
         prepareGUI();
-        readAndcalc();
     }
 
+    /**
+     * Baut die GUI auf, d.h. konfiguriert gewisse JComponents und fügt KeyListener und ActionListener hinzu
+     */
     private void prepareGUI(){
         add(rootPanel);
         setTitle("Mitternachtsformel");
@@ -40,6 +46,7 @@ public class midnightFormula extends JFrame{
         enter.setBorderPainted(false);
         ACButton.setBorderPainted(false);
 
+       //Fügt Keylistener hinzu. Wichtig für Formattierung der Eingabewerte
         textField1.addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
@@ -59,9 +66,7 @@ public class midnightFormula extends JFrame{
             }
         });
 
-    }
-
-    private void readAndcalc(){
+        //Fügt ActionListener, ActionMap und InputMap hinzu. Wichtig für Hotkeys
         enter.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -99,10 +104,13 @@ public class midnightFormula extends JFrame{
                 keyMap);
     }
 
+    /**
+     * Übergibt die, in die JTextFields eingegebenen Werte an Logic zur Berechnung und zeigt das Ergebnis/die Ergebnisse in den Ausgabefeldern an.
+     */
     private void calculate(){
         try{
             double [] input = new double [4];
-            input[0] = 4;
+            input[0] = 4; //Kennziffer für Mitternachtsformel
 
             input[1] = Double.parseDouble(textField1.getText());
             input[2] = Double.parseDouble(textField2.getText());
@@ -136,6 +144,9 @@ public class midnightFormula extends JFrame{
 
     }
 
+    /**
+     * Leert alle Felder des Rechners
+     */
     private  void ACAction(){
         textField1.setText("");
         textField2.setText("");
@@ -144,6 +155,12 @@ public class midnightFormula extends JFrame{
         textField5.setText("");
     }
 
+    /**
+     * Formatiert Eingabewerte, d.h. lässt nur double als Datentyp zu
+     * @param field
+     * @param lastDouble
+     * @return double
+     */
     private double doFormating(JTextField field, double lastDouble) {
         String text = field.getText();
         if (text.isEmpty() ){

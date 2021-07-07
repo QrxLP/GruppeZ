@@ -9,6 +9,7 @@ import java.awt.event.KeyEvent;
 
 public class GUIvector extends JFrame {
     private JPanel rootPanel;
+
     private JTextField a1;
     private JTextField b1;
     private JTextField c1;
@@ -18,18 +19,16 @@ public class GUIvector extends JFrame {
     private JTextField C1;
     private JTextField C2;
     private JTextField C3;
+
     private JButton enter;
     private JButton ACButton;
+
     private Double lastDoublea1 = 0.0;
     private Double lastDoubleb1 = 0.0;
     private Double lastDoublec1 = 0.0;
     private Double lastDoublea2 = 0.0;
     private Double lastDoubleb2 = 0.0;
     private Double lastDoublec2 = 0.0;
-
-    private final Color TEXT_COLOR = new Color(184,184,184);
-    private final Color RESULT_COLOR = new Color(4,135,217);
-
 
     GUIvector() {
         prepareGUI();
@@ -166,9 +165,9 @@ public class GUIvector extends JFrame {
 
     private double doFormating(JTextField field, double lastDouble) {
         String text = field.getText();
-        if (text.isEmpty() ){
+        if (text.isEmpty() ) {
             return 0.0;
-        };
+        }
 
 
         try {

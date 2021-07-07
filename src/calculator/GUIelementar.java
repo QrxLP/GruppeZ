@@ -28,13 +28,6 @@ public class GUIelementar extends JFrame {
     double lastDouble1 = 0.0;
     double lastDouble2 = 0.0;
 
-    private final Color TEXT_COLOR = new Color(184,184,184);
-    private final Color RESULT_COLOR = new Color(4,135,217);
-
-
-
-
-
     public GUIelementar()
     {
 
