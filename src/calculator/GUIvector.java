@@ -19,6 +19,7 @@ public class GUIvector extends JFrame {
     private JTextField C2;
     private JTextField C3;
     private JButton enter;
+    private JButton ACButton;
     private Double lastDoublea1 = 0.0;
     private Double lastDoubleb1 = 0.0;
     private Double lastDoublec1 = 0.0;
@@ -26,6 +27,8 @@ public class GUIvector extends JFrame {
     private Double lastDoubleb2 = 0.0;
     private Double lastDoublec2 = 0.0;
 
+    private final Color TEXT_COLOR = new Color(184,184,184);
+    private final Color RESULT_COLOR = new Color(4,135,217);
 
 
     GUIvector() {
@@ -42,6 +45,7 @@ public class GUIvector extends JFrame {
         setVisible(false);
 
         enter.setBorderPainted(false);
+        ACButton.setBorderPainted(false);
         Color textColor = new Color(184, 184, 184);
 
         a1.addKeyListener(new KeyAdapter() {
@@ -89,6 +93,12 @@ public class GUIvector extends JFrame {
                 calculate();
             }
         });
+        ACButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ACAction();
+            }
+        });
 
         ActionMap actionMap = new ActionMapUIResource();
         actionMap.put("action_enter", new AbstractAction() {
@@ -97,10 +107,18 @@ public class GUIvector extends JFrame {
                 calculate();
             }
         });
+        actionMap.put("action_acbutton", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ACAction();
+            }
+        });
 
         InputMap keyMap = new ComponentInputMap(rootPanel);
         keyMap.put(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ENTER,
                 0), "action_enter");
+        keyMap.put(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE,
+                0), "action_acbutton");
         SwingUtilities.replaceUIActionMap(rootPanel, actionMap);
         SwingUtilities.replaceUIInputMap(rootPanel, JComponent.WHEN_IN_FOCUSED_WINDOW,
                 keyMap);
@@ -134,6 +152,28 @@ public class GUIvector extends JFrame {
             ex2.printStackTrace();
             System.out.println("Array out of bounds.");
         }
+    }
+
+    private  void ACAction(){
+        a1.setText("");
+        a2.setText("");
+        b1.setText("");
+        b2.setText("");
+        c1.setText("");
+        c2.setText("");
+        C1.setText("");
+        C2.setText("");
+        C3.setText("");
+
+        a1.setForeground(TEXT_COLOR);
+        a2.setForeground(TEXT_COLOR);
+        b1.setForeground(TEXT_COLOR);
+        b2.setForeground(TEXT_COLOR);
+        c1.setForeground(TEXT_COLOR);
+        c2.setForeground(TEXT_COLOR);
+        C1.setForeground(TEXT_COLOR);
+        C2.setForeground(TEXT_COLOR);
+        C3.setForeground(TEXT_COLOR);
     }
 
     private double doFormating(JTextField field, double lastDouble) {

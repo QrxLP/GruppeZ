@@ -19,6 +19,7 @@ public class GUIscalar extends JFrame {
     private JButton enterButton;
     private JLabel outputLabel;
     private JLabel outputLabel2;
+    private JButton ACButton;
 
     double lastDoublea1 = 0.0;
     double lastDoublea2 = 0.0;
@@ -27,6 +28,8 @@ public class GUIscalar extends JFrame {
     double lastDoubleb2 = 0.0;
     double lastDoubleb3 = 0.0;
 
+    private final Color TEXT_COLOR = new Color(184,184,184);
+    private final Color RESULT_COLOR = new Color(4,135,217);
 
     GUIscalar(){
         prepareGUI();
@@ -40,6 +43,13 @@ public class GUIscalar extends JFrame {
                 calculate();
             }
         });
+        ACButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ACAction();
+            }
+        });
+
         ActionMap actionMap = new ActionMapUIResource();
         actionMap.put("action_enter", new AbstractAction() {
             @Override
@@ -47,10 +57,18 @@ public class GUIscalar extends JFrame {
                 calculate();
             }
         });
+        actionMap.put("action_acbutton", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ACAction();
+            }
+        });
 
         InputMap keyMap = new ComponentInputMap(rootPanel);
         keyMap.put(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ENTER,
                 0), "action_enter");
+        keyMap.put(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE,
+                0), "action_acbutton");
         SwingUtilities.replaceUIActionMap(rootPanel, actionMap);
         SwingUtilities.replaceUIInputMap(rootPanel, JComponent.WHEN_IN_FOCUSED_WINDOW,
                 keyMap);
@@ -90,16 +108,7 @@ public class GUIscalar extends JFrame {
         Color defaultColor=new Color(184,184,184);
 
         enterButton.setBorderPainted(false);
-        enterButton.setMnemonic(KeyEvent.VK_ENTER);
-
-        a1TextField.setCaretColor(defaultColor);
-        a2TextField.setCaretColor(defaultColor);
-        a3TextField.setCaretColor(defaultColor);
-
-        b1TextField.setCaretColor(defaultColor);
-        b2TextField.setCaretColor(defaultColor);
-        b3TextField.setCaretColor(defaultColor);
-
+        ACButton.setBorderPainted(false);
 
         a1TextField.addKeyListener(new KeyAdapter() {
             @Override
@@ -145,6 +154,24 @@ public class GUIscalar extends JFrame {
             }
         });
 
+    }
+
+    private  void ACAction(){
+        a1TextField.setText("");
+        a2TextField.setText("");
+        a3TextField.setText("");
+        b1TextField.setText("");
+        b2TextField.setText("");
+        b3TextField.setText("");
+        outputLabel2.setText("");
+
+        a1TextField.setForeground(TEXT_COLOR);
+        a2TextField.setForeground(TEXT_COLOR);
+        a3TextField.setForeground(TEXT_COLOR);
+        b1TextField.setForeground(TEXT_COLOR);
+        b2TextField.setForeground(TEXT_COLOR);
+        b3TextField.setForeground(TEXT_COLOR);
+        outputLabel2.setForeground(TEXT_COLOR);
     }
 
     private double doFormating(JTextField field, double lastDouble) {

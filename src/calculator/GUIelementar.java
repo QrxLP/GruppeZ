@@ -1,6 +1,7 @@
 package calculator;
 import javax.swing.*;
 import javax.swing.plaf.ActionMapUIResource;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -26,6 +27,9 @@ public class GUIelementar extends JFrame {
 
     double lastDouble1 = 0.0;
     double lastDouble2 = 0.0;
+
+    private final Color TEXT_COLOR = new Color(184,184,184);
+    private final Color RESULT_COLOR = new Color(4,135,217);
 
 
 
@@ -187,6 +191,10 @@ public class GUIelementar extends JFrame {
     private  void ACAction(){
         input1.setText(null);
         input2.setText(null);
+        output.setText(null);
+        input1.setForeground(TEXT_COLOR);
+        input2.setForeground(TEXT_COLOR);
+        output.setForeground(TEXT_COLOR);
     }
     private void addAction(){
         operatorNr= 0;

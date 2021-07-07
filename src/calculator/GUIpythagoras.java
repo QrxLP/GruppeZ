@@ -17,9 +17,12 @@ public class GUIpythagoras extends JFrame {
     private JLabel katheteBLabel;
     private JLabel hypothenuseLabel;
     private JButton enter;
+    private JButton ACButton;
     private Double lastDoubleKatheteA = 0.0;
     private Double lastDoubleKatheteB = 0.0;
     private Double lastDoubleKHypotenuse = 0.0;
+    private final Color TEXT_COLOR = new Color(184,184,184);
+    private final Color RESULT_COLOR = new Color(4,135,217);
 
 
 
@@ -30,15 +33,13 @@ public class GUIpythagoras extends JFrame {
         setLocationRelativeTo(null);
 
         katheteATextField.setText("");
-        katheteATextField.setText("");
+        katheteBTextField.setText("");
         hypothenuseTextField.setText("");
 
         setSize(400,400);
 
         enter.setBorderPainted(false);
-
-        JButton enterButton = new JButton("Enter");
-        getRootPane().setDefaultButton(enterButton);
+        ACButton.setBorderPainted(false);
 
         add(rootPanel);
 
@@ -77,6 +78,12 @@ public class GUIpythagoras extends JFrame {
                 calculate();
             }
         });
+        ACButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ACAction();
+            }
+        });
 
         ActionMap actionMap = new ActionMapUIResource();
         actionMap.put("action_enter", new AbstractAction() {
@@ -85,25 +92,31 @@ public class GUIpythagoras extends JFrame {
                 calculate();
             }
         });
+        actionMap.put("action_acbutton", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ACAction();
+            }
+        });
 
         InputMap keyMap = new ComponentInputMap(rootPanel);
         keyMap.put(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ENTER,
                 0), "action_enter");
+        keyMap.put(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE,
+                0), "action_acbutton");
         SwingUtilities.replaceUIActionMap(rootPanel, actionMap);
         SwingUtilities.replaceUIInputMap(rootPanel, JComponent.WHEN_IN_FOCUSED_WINDOW,
                 keyMap);
     }
 
     private void calculate(){
-        Color resultColor= new Color(4,135,217);
-        Color textColor=new Color(184,184,184);
 
         try {
             double[] param = new double[4];
             param[0] = 7;
-            katheteATextField.setForeground(textColor); //changes the color back to the default text color, important for consecutive calculations
-            katheteBTextField.setForeground(textColor);
-            hypothenuseTextField.setForeground(textColor);
+            katheteATextField.setForeground(TEXT_COLOR); //changes the color back to the default text color, important for consecutive calculations
+            katheteBTextField.setForeground(TEXT_COLOR);
+            hypothenuseTextField.setForeground(TEXT_COLOR);
 
             //first input jTextField is empty, the others not
             if (katheteATextField.getText().equals("") && !katheteBTextField.getText().equals("") && !hypothenuseTextField.getText().equals("")) {
@@ -113,7 +126,7 @@ public class GUIpythagoras extends JFrame {
                 double[] out = Logic.calc(param);
                 double outNumber = (Math.round(out[0] * 100.0) / 100.0);
                 katheteATextField.setText(String.valueOf(outNumber));
-                katheteATextField.setForeground(resultColor);
+                katheteATextField.setForeground(RESULT_COLOR);
             }
             //second input jTextField is empty, the others not
             else if (katheteBTextField.getText().equals("") && !katheteATextField.getText().equals("") && !hypothenuseTextField.getText().equals("")) {
@@ -123,7 +136,7 @@ public class GUIpythagoras extends JFrame {
                 double[] out = Logic.calc(param);
                 double outNumber = (Math.round(out[0] * 100.0) / 100.0);
                 katheteBTextField.setText(String.valueOf(outNumber));
-                katheteBTextField.setForeground(resultColor);
+                katheteBTextField.setForeground(RESULT_COLOR);
             }
             //third input jTextField is empty, the others not
             else if (hypothenuseTextField.getText().equals("") && !katheteATextField.getText().equals("") && !katheteBTextField.getText().equals("")) {
@@ -133,7 +146,7 @@ public class GUIpythagoras extends JFrame {
                 double[] out = Logic.calc(param);
                 double outNumber = (Math.round(out[0] * 100.0) / 100.0);
                 hypothenuseTextField.setText(String.valueOf(outNumber));
-                hypothenuseTextField.setForeground(resultColor);
+                hypothenuseTextField.setForeground(RESULT_COLOR);
             }
             //multiple input jTextFields are empty or all are full
             else {
@@ -150,6 +163,15 @@ public class GUIpythagoras extends JFrame {
             ex2.printStackTrace();
             System.out.println("Array out of bounds.");
         }
+    }
+
+    private void ACAction(){
+        katheteATextField.setText("");
+        katheteBTextField.setText("");
+        hypothenuseTextField.setText("");
+        katheteATextField.setForeground(TEXT_COLOR);
+        katheteBTextField.setForeground(TEXT_COLOR);
+        hypothenuseTextField.setForeground(TEXT_COLOR);
     }
 
     private double doFormating(JTextField field, double lastDouble) {

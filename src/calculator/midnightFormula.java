@@ -1,6 +1,7 @@
 package calculator;
 import javax.swing.*;
 import javax.swing.plaf.ActionMapUIResource;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -15,10 +16,13 @@ public class midnightFormula extends JFrame{
     private JTextField textField4;
     private JTextField textField5;
     private JLabel resultPossibleLabel;
+    private JButton ACButton;
     private Double lastDoublea1 = 0.0;
     private Double lastDoublea2 = 0.0;
     private Double lastDoublea3 = 0.0;
 
+    private final Color TEXT_COLOR = new Color(184,184,184);
+    private final Color RESULT_COLOR = new Color(4,135,217);
 
     public midnightFormula(){
         prepareGUI();
@@ -34,6 +38,7 @@ public class midnightFormula extends JFrame{
 
         resultPossibleLabel.setVisible(false);
         enter.setBorderPainted(false);
+        ACButton.setBorderPainted(false);
 
         textField1.addKeyListener(new KeyAdapter() {
             @Override
@@ -63,6 +68,13 @@ public class midnightFormula extends JFrame{
                 calculate();
             }
         });
+        ACButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ACAction();
+            }
+        });
+
         ActionMap actionMap = new ActionMapUIResource();
         actionMap.put("action_enter", new AbstractAction() {
             @Override
@@ -70,10 +82,18 @@ public class midnightFormula extends JFrame{
                 calculate();
             }
         });
+        actionMap.put("action_acbutton", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ACAction();
+            }
+        });
 
         InputMap keyMap = new ComponentInputMap(rootPanel);
         keyMap.put(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ENTER,
                 0), "action_enter");
+        keyMap.put(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE,
+                0), "action_acbutton");
         SwingUtilities.replaceUIActionMap(rootPanel, actionMap);
         SwingUtilities.replaceUIInputMap(rootPanel, JComponent.WHEN_IN_FOCUSED_WINDOW,
                 keyMap);
@@ -109,6 +129,20 @@ public class midnightFormula extends JFrame{
             System.out.println("Array out of bounds.");
         }
 
+    }
+
+    private  void ACAction(){
+        textField1.setText("");
+        textField2.setText("");
+        textField3.setText("");
+        textField4.setText("");
+        textField5.setText("");
+
+        textField1.setForeground(TEXT_COLOR);
+        textField2.setForeground(TEXT_COLOR);
+        textField3.setForeground(TEXT_COLOR);
+        textField4.setForeground(TEXT_COLOR);
+        textField5.setForeground(TEXT_COLOR);
     }
 
     private double doFormating(JTextField field, double lastDouble) {
