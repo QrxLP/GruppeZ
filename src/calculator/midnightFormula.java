@@ -86,4 +86,19 @@ public class midnightFormula extends JFrame{
         }
 
     }
+
+    private double doFormating(JTextField field, double lastDouble) {
+        String text = field.getText();
+        if (text.isEmpty() ){
+            return 0.0;
+        };
+
+
+        try {
+            lastDouble = Double.parseDouble(text);
+        } catch (NumberFormatException ex) {
+            field.setText(String.valueOf(lastDouble));
+        }
+        return lastDouble;
+    }
 }

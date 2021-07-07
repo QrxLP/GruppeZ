@@ -126,4 +126,19 @@ public class GUIpythagoras extends JFrame {
             System.out.println("Array out of bounds.");
         }
     }
+
+    private double doFormating(JTextField field, double lastDouble) {
+        String text = field.getText();
+        if (text.isEmpty() ){
+            return 0.0;
+        };
+
+
+        try {
+            lastDouble = Double.parseDouble(text);
+        } catch (NumberFormatException ex) {
+            field.setText(String.valueOf(lastDouble));
+        }
+        return lastDouble;
+    }
 }

@@ -4,6 +4,8 @@ import javax.swing.plaf.ActionMapUIResource;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class GUIvector extends JFrame {
     private JPanel rootPanel;
@@ -17,10 +19,19 @@ public class GUIvector extends JFrame {
     private JTextField C2;
     private JTextField C3;
     private JButton enter;
+    private Double lastDoublea1 = 0.0;
+    private Double lastDoubleb1 = 0.0;
+    private Double lastDoublec1 = 0.0;
+    private Double lastDoublea2 = 0.0;
+    private Double lastDoubleb2 = 0.0;
+    private Double lastDoublec2 = 0.0;
+
+
 
     GUIvector() {
         prepareGUI();
         readAndCalc();
+
     }
 
     private void prepareGUI(){
@@ -32,6 +43,43 @@ public class GUIvector extends JFrame {
 
         enter.setBorderPainted(false);
         Color textColor = new Color(184, 184, 184);
+
+        a1.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                lastDoublea1 = doFormating (a1, lastDoublea1);
+            }
+        });
+        b1.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                lastDoubleb1 = doFormating (b1, lastDoubleb1);
+            }
+        });
+        c1.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                lastDoublec1 = doFormating (c1, lastDoublec1);
+            }
+        });
+        a2.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                lastDoublea2 = doFormating (a2, lastDoublea2);
+            }
+        });
+        b2.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                lastDoubleb2 = doFormating (b2, lastDoubleb2);
+            }
+        });
+        c2.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                lastDoublec2 = doFormating (c2, lastDoublec2);
+            }
+        });
     }
 
     private void readAndCalc() {
@@ -88,7 +136,20 @@ public class GUIvector extends JFrame {
         }
     }
 
+    private double doFormating(JTextField field, double lastDouble) {
+        String text = field.getText();
+        if (text.isEmpty() ){
+            return 0.0;
+        };
 
+
+        try {
+            lastDouble = Double.parseDouble(text);
+        } catch (NumberFormatException ex) {
+            field.setText(String.valueOf(lastDouble));
+        }
+        return lastDouble;
+    }
 
 
 }
