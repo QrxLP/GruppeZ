@@ -164,7 +164,7 @@ public class GUIelementar extends JFrame {
             param[2] = Double.parseDouble(input2.getText());
 
             out = Logic.calc(param);
-            output.setText(String.valueOf(out[0]));
+            output.setText(String.valueOf(Math.round(out[0] * 100.0  ) / 100.0));
 
         }catch (NumberFormatException ex1) {
             ex1.printStackTrace();

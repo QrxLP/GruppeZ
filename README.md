@@ -10,7 +10,7 @@ VektorGUI als Vorbild
 
     Lukas:Skalar, Vektor
 
-    Max:Logic, Elementar, Manager
+    Max:Logic, Elementar, Manager 
 
     Michi:Pythagoras, Mitternachtsformel
 
