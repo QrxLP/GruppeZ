@@ -2,8 +2,7 @@
 TODOs:
 -Farben der Ergebnisse auf Blau setzen 
 -Nachkommastellen vom Ergebnis auf 2(?) Stellen runden (v.a. in Elementar)
--evtl. "ACButton" überall einfügen
--zweimal enter drücken = Felder löschen 
+-//zweimal enter drücken = Felder löschen (erstmal unwichtig)
 -Exceptions vervollständigen (leere Eingabefelder)
 -scalarprodukt winkel geht noch nicht :(
 
