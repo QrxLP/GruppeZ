@@ -3,6 +3,7 @@ import javax.swing.*;
 import javax.swing.plaf.ActionMapUIResource;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 public class midnightFormula extends JFrame{
@@ -14,6 +15,10 @@ public class midnightFormula extends JFrame{
     private JTextField textField4;
     private JTextField textField5;
     private JLabel resultPossibleLabel;
+    private Double lastDoublea1 = 0.0;
+    private Double lastDoublea2 = 0.0;
+    private Double lastDoublea3 = 0.0;
+
 
     public midnightFormula(){
         prepareGUI();
@@ -29,6 +34,26 @@ public class midnightFormula extends JFrame{
 
         resultPossibleLabel.setVisible(false);
         enter.setBorderPainted(false);
+
+        textField1.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                lastDoublea1 = doFormating (textField1, lastDoublea1);
+            }
+        });
+        textField2.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                lastDoublea2 = doFormating (textField2, lastDoublea2);
+            }
+        });
+        textField3.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                lastDoublea3 = doFormating (textField3, lastDoublea3);
+            }
+        });
+
     }
 
     private void readAndcalc(){
