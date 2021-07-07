@@ -5,6 +5,7 @@ import javax.swing.plaf.ActionMapUIResource;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 public class GUIpythagoras extends JFrame {
@@ -16,7 +17,9 @@ public class GUIpythagoras extends JFrame {
     private JLabel katheteBLabel;
     private JLabel hypothenuseLabel;
     private JButton enter;
-
+    private Double lastDoubleKatheteA = 0.0;
+    private Double lastDoubleKatheteB = 0.0;
+    private Double lastDoubleKHypotenuse = 0.0;
 
 
 
@@ -38,6 +41,29 @@ public class GUIpythagoras extends JFrame {
         getRootPane().setDefaultButton(enterButton);
 
         add(rootPanel);
+
+
+        katheteATextField.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                super.keyTyped(e);
+                lastDoubleKatheteA = doFormating(katheteATextField, lastDoubleKatheteA);
+            }
+        });
+        katheteBTextField.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                super.keyTyped(e);
+                lastDoubleKatheteB = doFormating(katheteBTextField, lastDoubleKatheteB);
+            }
+        });
+        hypothenuseTextField.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                super.keyTyped(e);
+                lastDoubleKHypotenuse = doFormating(hypothenuseTextField, lastDoubleKHypotenuse );
+            }
+        });
 
         readAndCalc();
 
