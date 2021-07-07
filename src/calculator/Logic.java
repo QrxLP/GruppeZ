@@ -177,35 +177,27 @@ public class Logic {
         b1 = input[3];
         b2 = input[4];
         b3 = input[5];
-        result = new double[2];
-
-
-        //Logic
-        //scalar_product = a1 * b1 + a2 * b2 + a3 * b3;
-
-
-        //Filling result array and returning it.
-        //result[0] = scalar_product;
-
-
-        //winkel
+        result = new double[3];
 
         double zähler;
         double nenner;
 
 
         double[] a;
-        a = new double[]{input[0], input[1], input[2]};
+        a = new double[]{a1, a2, a3};
 
         double[] b;
-        b = new double[]{input[3], input[4], input[5]};
+        b = new double[]{b1, b2, b3};
 
         zähler = a1 * b1 + a2 * b2 + a3 * b3;
-        nenner = vector_lenght(a)[0] + vector_lenght(b)[0];
+        nenner = vector_lenght(a)[0] * vector_lenght(b)[0];
+        double bruch = zähler / nenner;
+
 
 
         result[0] = zähler;
-        result[1] = Math.toDegrees(Math.acos(zähler / nenner));
+        result[1] = Math.toDegrees(Math.acos(bruch));
+        result[2] = nenner;
 
 
 
