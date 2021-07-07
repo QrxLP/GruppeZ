@@ -2,8 +2,8 @@
 TODOs:
 -Farben der Ergebnisse auf Blau setzen
 -Nachkommastellen vom Ergebnis auf 2(?) Stellen runden (v.a. in Elementar) (vgl. PythagorasGUI)
--Exceptions verbessern 
--scalarprodukt winkel geht noch nicht :(
+
+
 
 -prepareGUI und anderes: 
 VektorGUI als Vorbild
