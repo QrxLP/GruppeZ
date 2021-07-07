@@ -143,13 +143,16 @@ public class GUIvector extends JFrame {
                     C1.setText(String.valueOf(output[0]));
                     C2.setText(String.valueOf(output[1]));
                     C3.setText(String.valueOf(output[2]));
-        } catch (NumberFormatException | NullPointerException ex1) {
+        } catch (NumberFormatException ex1) {
             ex1.printStackTrace();
-            System.out.println("No input was found at one or more fields or Input is not " +
-                    "a double!");
+            System.out.println("Input is not a double!");
 
-        } catch (ArrayIndexOutOfBoundsException ex2) {
+        }catch (NullPointerException ex2){
             ex2.printStackTrace();
+            System.out.println("No input was found at one or more fields");
+        }
+        catch (ArrayIndexOutOfBoundsException ex3) {
+            ex3.printStackTrace();
             System.out.println("Array out of bounds.");
         }
     }

@@ -1,9 +1,8 @@
 # GruppeZ
 TODOs:
--Farben der Ergebnisse auf Blau setzen 
--Nachkommastellen vom Ergebnis auf 2(?) Stellen runden (v.a. in Elementar)
--//zweimal enter drücken = Felder löschen (erstmal unwichtig)
--Exceptions vervollständigen (leere Eingabefelder)
+-Farben der Ergebnisse auf Blau setzen
+-Nachkommastellen vom Ergebnis auf 2(?) Stellen runden (v.a. in Elementar) (vgl. PythagorasGUI)
+-Exceptions verbessern 
 -scalarprodukt winkel geht noch nicht :(
 
 -prepareGUI und anderes: 
