@@ -156,7 +156,7 @@ public class Logic {
      */
     public static double [] scalar_product(double [] input) {
 
-        //Declaring variables.
+        //Variablen deklarieren
         double a1;
         double a2;
         double a3;
@@ -180,7 +180,7 @@ public class Logic {
         double zähler;
         double nenner;
 
-
+        //zwei array für die Berechnung der Vektor länge erstellen und füllen
         double[] a;
         a = new double[]{a1, a2, a3};
 
