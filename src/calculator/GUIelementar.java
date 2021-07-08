@@ -183,11 +183,16 @@ public class GUIelementar extends JFrame {
             System.out.println("Array out of bounds.");
         }
     }
+    /**
+     * Leert alle Felder des Rechners und setzt Textfarbe zurück
+     */
     private  void ACAction(){
         input1.setText(null);
         input2.setText(null);
         output.setText(null);
     }
+
+
     private void addAction(){
         operatorNr= 0;
         operator.setText("+");
@@ -205,6 +210,12 @@ public class GUIelementar extends JFrame {
         operator.setText("/");
     }
 
+    /**
+     * Formatiert Eingabewerte, d.h. lässt nur double als Datentyp zu
+     * @param field
+     * @param lastDouble
+     * @return double
+     */
     private double doFormating(JTextField field, double lastDouble) {
         String text = field.getText();
         if (text.isEmpty() ){
