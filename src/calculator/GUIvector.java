@@ -34,6 +34,9 @@ public class GUIvector extends JFrame {
         prepareGUI();
     }
 
+    /**
+     * Baut die GUI auf, d.h. konfiguriert gewisse JComponents und fügt KeyListener und ActionListener hinzu
+     */
     private void prepareGUI(){
         add(rootPanel);
         setTitle("Vektorprodukt");
@@ -118,6 +121,9 @@ public class GUIvector extends JFrame {
                 keyMap);
     }
 
+    /**
+     * Übergibt die, in die JTextFields eingegebenen Werte an Logic zur Berechnung und zeigt das Ergebnis/die Ergebnisse in den Ausgabefeldern an.
+     */
     private void calculate(){
         try {
 
@@ -151,6 +157,9 @@ public class GUIvector extends JFrame {
         }
     }
 
+    /**
+     * Leert alle Felder des Rechners
+     */
     private  void ACAction(){
         a1.setText("");
         a2.setText("");
@@ -163,6 +172,12 @@ public class GUIvector extends JFrame {
         C3.setText("");
     }
 
+    /**
+     * Formatiert Eingabewerte, d.h. lässt nur double als Datentyp zu
+     * @param field
+     * @param lastDouble
+     * @return double
+     */
     private double doFormating(JTextField field, double lastDouble) {
         String text = field.getText();
         if (text.isEmpty() ) {

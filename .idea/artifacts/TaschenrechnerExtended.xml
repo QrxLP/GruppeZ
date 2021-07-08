@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TaschenrechnerExtended">
+    <output-path>$PROJECT_DIR$/out/artifacts/TaschenrechnerExtended</output-path>
+    <root id="archive" name="TaschenrechnerExtended.jar" />
+  </artifact>
+</component>
