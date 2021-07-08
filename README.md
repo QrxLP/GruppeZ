@@ -1,17 +1,33 @@
 # GruppeZ
-TODOs:
--Farben der Ergebnisse auf Blau setzen
--Nachkommastellen vom Ergebnis auf 2(?) Stellen runden (v.a. in Elementar) (vgl. PythagorasGUI)
+
+Taschenrechner zur einfachen Elementarrechnung, Satz des Pythagoras, Skalarrechnung, Vektorrechnung und Mitternachtsformel
+
+GUImanager als Verwaltungsklasse 
+Logic für die Berechnung 
+GUI* für Teilbereiche der Rechnungen 
+
+Hotkeys: 
+
+-Enter = Berechnen(=)
+
+-Espcape = Alles löschen (AC)
+
+-Numpad + - * / : Elementarrechnung + - * /
 
 
+Arbeitsaufteilung:
 
--prepareGUI und anderes: 
-VektorGUI als Vorbild
+Einzelne Klassen + jeweilige Grafik:
+Max: GUImanager, GUIelementar, GUIscalar  
+Lukas:GUIvektor, GUImidnightFormula
+Michael:GUIpythagoras 
 
-    Lukas:Skalar, Vektor
+Klasse Logic: 
+Max: scalar_product,vector_length 
+Lukas: pythagoras_theorem, vector_product, midnight_formula
+Michael: add, subtract, multiply, divide, calc, "Grundgerüst"
 
-    Max:Logic, Elementar, Manager 
-
-    Michi:Pythagoras, Mitternachtsformel
-
--Checkliste:Formatting, Exceptions, Hotkeys, Aufbau(PrepareGui, Calculate), KOMMENTARE auf deutsch
+Alle Klassen:
+Max: Formatierung(nur Double), "Vorbild für GUI" 
+Lukas: Exceptions, Klassenstruktur 
+Michael: Hotkeys, Runden 
