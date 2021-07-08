@@ -31,10 +31,11 @@ public class GUIelementar extends JFrame {
     public GUIelementar()
     {
         prepareGUI();
-        readAndCalc();
     }
 
-
+    /**
+     * Baut die GUI auf, d.h. konfiguriert gewisse JComponents und fügt KeyListener und ActionListener hinzu
+     */
     public void prepareGUI(){
         add(rootPanel);
         setTitle("Elementarrechnung");
@@ -61,10 +62,7 @@ public class GUIelementar extends JFrame {
                 lastDouble2 = doFormating(input2, lastDouble2);
             }
         });
-    }
 
-
-    private void readAndCalc(){
         enter.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -158,6 +156,11 @@ public class GUIelementar extends JFrame {
         SwingUtilities.replaceUIInputMap(rootPanel, JComponent.WHEN_IN_FOCUSED_WINDOW,
                 keyMap);
     }
+
+
+    /**
+     * Übergibt die, in die JTextFields eingegebenen Werte an Logic zur Berechnung und zeigt das Ergebnis im Ausgabefeld an.
+     */
     private void calculate(){
         try {
             double[] param = new double[3];
@@ -184,7 +187,7 @@ public class GUIelementar extends JFrame {
         }
     }
     /**
-     * Leert alle Felder des Rechners und setzt Textfarbe zurück
+     * Leert alle Felder des Rechners
      */
     private  void ACAction(){
         input1.setText(null);
