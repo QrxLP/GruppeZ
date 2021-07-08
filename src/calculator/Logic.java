@@ -156,7 +156,7 @@ public class Logic {
      */
     public static double [] scalar_product(double [] input) {
 
-        //Declaring variables.
+        //Variablen deklarieren
         double a1;
         double a2;
         double a3;
@@ -168,7 +168,7 @@ public class Logic {
 
 
 
-        //Initializing the array which returns the result and the variables which save the values from the input array.
+        //die Variablen aus dem input array in die Varablen
         a1 = input[0];
         a2 = input[1];
         a3 = input[2];
@@ -180,19 +180,20 @@ public class Logic {
         double zähler;
         double nenner;
 
-
+        //zwei array für die Berechnung der Vektor länge erstellen und füllen
         double[] a;
         a = new double[]{a1, a2, a3};
 
         double[] b;
         b = new double[]{b1, b2, b3};
 
+        //zähler und nenner berechnen
         zähler = a1 * b1 + a2 * b2 + a3 * b3;
         nenner = vector_lenght(a)[0] * vector_lenght(b)[0];
         double bruch = zähler / nenner;
 
 
-
+        //result array füllen
         result[0] = zähler;
         result[1] = Math.toDegrees(Math.acos(bruch));
         result[2] = nenner;
@@ -206,7 +207,7 @@ public class Logic {
      *
      * Reihenfolge im input array: a1, a2, a3.
      * @param input array
-     *
+     * @return result double
      */
     public static double[] vector_lenght(double[] input){
         double[] result;
