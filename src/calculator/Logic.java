@@ -8,24 +8,25 @@ public class Logic {
     }
 
     /**
-     * Decides which mathematical operation is supposed to be used by the first value in the input array
-     * 0 for Addition
-     * 1 for Subtraction
-     * 2 for Multiplication
-     * 3 for Division
-     * 4 for Midnight_formula
-     * 5 for scalar_product
-     * 6 for vector_product
-     * 7 for phytagoras_theorem
+     * Entscheidet welche Rechenart (Methode) verwendet werden soll über die erste Stelle im Arry
+     * 0 -- Addition
+     * 1 -- Subtraktion
+     * 2 -- Multiplikation
+     * 3 -- Division
+     * 4 -- Mitternachtsformel
+     * 5 -- Skalarprodukt
+     * 6 -- Vektorprodukt
+     * 7 -- Satz des Pythagoras
+     * 8 -- Vektorlänge
      *
-     * @param input Array of numbers to be calculated
-     * @return Result of the calculation
+     * @param input Eingabewerte
+     * @return Ergenbnis der Berechnung
      */
     public static double[] calc(double[] input)
     {
-        //First number in array for decision of operation
+        //Erstes Element im input array Entscheidet mathematische Operation
         int op = (int)input[0];
-        //Deletes the first value of the array
+        //Entfernt erstes Element aus dem array und schiebt alle Elemente nach
         int tempLength=input.length-1;
         double[] temp = new double [tempLength];
         for(int i=0;i<temp.length;i++)
@@ -33,7 +34,7 @@ public class Logic {
             temp[i]=input[i+1];
         }
         double[] res;
-        //Decision for operation ; add new operations when finished
+        //Entscheidung über mathematische Operation
         switch (op)
         {
             case 0: res= add(temp);
@@ -56,16 +57,15 @@ public class Logic {
 
             default:
                 res = new double[10];
-                //Error!
         }
         return res;
 
     }
 
     /**
-     * Adds two numbers
-     * @param input Numbers to be added
-     * @return Result
+     * Addiert zwei Zahlen
+     * @param input Zahlen die addiert werden
+     * @return Ergebnis
      */
     public static double[] add(double[] input)
     {
@@ -75,9 +75,9 @@ public class Logic {
     }
 
     /**
-     *  Subtracts one number from another
-     * @param input Numbers to be subtracted
-     * @return Result
+     *  Subtrahiert zweite Zahl von der ersten
+     * @param input Zahlen die subtahiert werden
+     * @return Ergebnis
      */
     public static double[] subtract(double[] input)
     {
@@ -87,9 +87,9 @@ public class Logic {
     }
 
     /**
-     * Multiplies two numbers
-     * @param input Numbers to be multiplied
-     * @return Result
+     * Multipliziert zwei Zahlen
+     * @param input Zahlen die multipliziert werden
+     * @return Ergebnis
      */
     public static double[] multiply(double[] input)
     {
@@ -99,9 +99,9 @@ public class Logic {
     }
 
     /**
-     *  Divides one number by another
-     * @param input Numbers to be divided
-     * @return Result
+     *  Dividiert eine Zahl durch eine andere
+     * @param input Zahlen die dividiert werden
+     * @return Ergebnis
      */
     public static double[] divide(double[] input)
     {
@@ -115,8 +115,6 @@ public class Logic {
      */
     public static double [] midnight_formula(double [] input) {
 
-
-        //Declaring variables.
         double a;
         double b;
         double c;
@@ -125,15 +123,12 @@ public class Logic {
         double x2;
         double [] result;
 
-
-        //Initializing the array which returns the result and the variables which save the input received from the input array.
         a = input[0];
         b = input [1];
         c = input [2];
         result  = new double[3];
 
-
-        //Logic: Splits the process into 2 parts.
+        //Logic: Teilt den Prozess
         value_under_sqrt = Math.pow(b, 2) - 4 * a * c;
         if(value_under_sqrt <= 0) {
             result[2] = 1;
@@ -141,8 +136,6 @@ public class Logic {
         x1 = (-1 * b + Math.sqrt(value_under_sqrt)) / (2 * a);
         x2 = (-1 * b - Math.sqrt(value_under_sqrt)) / (2 * a);
 
-
-        //Filling the result array with the result values, returning it.
         result [0] = x1;
         result [1] = x2;
         return result;
@@ -224,7 +217,6 @@ public class Logic {
      */
     public static double [] vector_product(double [] input) {
 
-        //Declaring variables.
         double a1;
         double a2;
         double a3;
@@ -236,8 +228,6 @@ public class Logic {
         double result_c3;
         double [] result;
 
-
-        //Initializing the result array and the variables which save the values from the input array.
         a1 = input[0];
         a2 = input [1];
         a3 = input [2];
@@ -252,8 +242,6 @@ public class Logic {
         result_c2 = a3 * b1 - a1 * b3;
         result_c3 = a1 * b2 - a2 * b1;
 
-
-        //Filling the result array and returning it.
         result [0] = result_c1;
         result [1] = result_c2;
         result [2] = result_c3;
@@ -269,27 +257,22 @@ public class Logic {
      */
     public static double [] phytagoras_theorem(double [] input) {
 
-        //Declaring variables.
         double cathete_a;
         double cathete_b;
         double hypothenuse_c;
-        double result_variable; // saved in result  array
+        double result_variable;
         double [] result;
         double variable_under_sqrt;
 
 
-        //Initializing the variables which save the values received from the input array.
         hypothenuse_c = input [0];
         cathete_a = input [1];
         cathete_b = input [2];
 
 
 
-        /*
-         * Logic: If ANY of the three variables equals 0, the program regards it as empty and therefore
-         * it is the one which needs to be calculated.
-         * If no variable equals 0, zero is returned to show that something was wrong :).
-         */
+
+        //Wenn eine Variable 0 ist, wird diese als leer bezeichnet und ist somit die Variable die berechnet werden muss
         if(hypothenuse_c == 0) {
             variable_under_sqrt = Math.pow(cathete_a, 2) + Math.pow(cathete_b, 2);
             result_variable = Math.sqrt(variable_under_sqrt);
@@ -305,8 +288,6 @@ public class Logic {
             result_variable = 0;
         }
 
-
-        //Filling the result array and returning it.
         result = new double [1];
         result [0] = result_variable;
         return result;
