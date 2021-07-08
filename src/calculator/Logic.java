@@ -1,7 +1,5 @@
 package calculator;
 
-import javax.swing.*;
-
 public class Logic {
 
     Logic()
@@ -18,7 +16,7 @@ public class Logic {
      * 4 for Midnight_formula
      * 5 for scalar_product
      * 6 for vector_product
-     * 7 for Phytagoras_theorem
+     * 7 for phytagoras_theorem
      *
      * @param input Array of numbers to be calculated
      * @return Result of the calculation
@@ -52,7 +50,7 @@ public class Logic {
                 break;
             case 6: res=vector_product(temp);
                 break;
-            case 7: res=Phytagoras_theorem(temp);
+            case 7: res= phytagoras_theorem(temp);
                 break;
             case 8: res=vector_lenght(temp);
 
@@ -165,9 +163,9 @@ public class Logic {
         double b1;
         double b2;
         double b3;
-        double scalar_product; // result variable
+
         double[] result;
-        boolean isReturnable = false;
+
 
 
         //Initializing the array which returns the result and the variables which save the values from the input array.
@@ -203,11 +201,18 @@ public class Logic {
 
         return result;
     }
-
+    /**
+     * Methode für die Länge eines Vektors
+     *
+     * Reihenfolge im input array: a1, a2, a3.
+     * @param input array
+     *
+     */
     public static double[] vector_lenght(double[] input){
         double[] result;
         result = new double[3];
 
+        //quadreiern addieren und wurzel ziehen
         result[0] = Math.sqrt(Math.pow(input[0],2) + Math.pow(input[1],2) + Math.pow(input[2],2));
 
         return result;
@@ -261,7 +266,7 @@ public class Logic {
      * input [1] = Kathete A
      * input [2] = Kathete B
      */
-    public static double [] Phytagoras_theorem(double [] input) {
+    public static double [] phytagoras_theorem(double [] input) {
 
         //Declaring variables.
         double cathete_a;

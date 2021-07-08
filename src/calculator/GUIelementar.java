@@ -7,6 +7,10 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+
+/**
+ * Implementiert das GUI für die Berechnung Elementarer Mathematik und die Übergabe der Eingabewerte an Logic zur Berechnung
+ */
 public class GUIelementar extends JFrame {
 
     private JPanel rootPanel;
