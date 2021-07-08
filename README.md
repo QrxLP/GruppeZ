@@ -14,6 +14,8 @@ Hotkeys:
 
 -Numpad + - * / : Elementarrechnung + - * /
 
+-minus gedrückthalten und gleich Zahl eingeben für negative Zahlen
+
 
 Arbeitsaufteilung:
 
