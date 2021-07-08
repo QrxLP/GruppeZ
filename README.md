@@ -19,17 +19,17 @@ Hotkeys:
 
 Arbeitsaufteilung:
 
-Einzelne Klassen + jeweilige Grafik:
+**Einzelne Klassen + jeweilige Grafik:**
 Max: GUImanager, GUIelementar, GUIscalar  
 Lukas:GUIvektor, GUImidnightFormula
 Michael:GUIpythagoras 
 
-Klasse Logic: 
+**Klasse Logic:** 
 Max: scalar_product,vector_length 
 Lukas: pythagoras_theorem, vector_product, midnight_formula
 Michael: add, subtract, multiply, divide, calc, "Grundgerüst"
 
-Alle Klassen:
+**Alle Klassen:**
 Max: Formatierung(nur Double), "Vorbild für GUI" 
 Lukas: Exceptions, Klassenstruktur 
 Michael: Hotkeys, Runden 
