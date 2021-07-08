@@ -147,8 +147,8 @@ public class GUIscalar extends JFrame {
             temp[5] = Double.parseDouble(b2TextField.getText());
             temp[6] = Double.parseDouble(b3TextField.getText());
 
-            outputLabel2.setText(String.valueOf((Logic.calc(temp)[1])));
-            outputLable1.setText(String.valueOf((Logic.calc(temp)[0])));
+            outputLabel2.setText(String.valueOf(Math.round(Logic.calc(temp)[1] +100.0) / 100.0));
+            outputLable1.setText(String.valueOf(Math.round(Logic.calc(temp)[0] +100.0) / 100.0));
         } catch (NumberFormatException ex1) {
             ex1.printStackTrace();
             System.out.println("Input is not " +
