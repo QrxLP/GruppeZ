@@ -130,7 +130,7 @@ public class Logic {
 
         //Logic: Teilt den Prozess
         value_under_sqrt = Math.pow(b, 2) - 4 * a * c;
-        if(value_under_sqrt <= 0) {
+        if(value_under_sqrt < 0) {
             result[2] = 1;
         }
         x1 = (-1 * b + Math.sqrt(value_under_sqrt)) / (2 * a);
